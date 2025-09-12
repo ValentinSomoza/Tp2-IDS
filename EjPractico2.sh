@@ -8,7 +8,7 @@ mkdir css
 mkdir images
 cd ..
 mkdir templates
-mkdir app.py
+touch app.py
 pipenv install flask
 pipenv shell
 export FLASK_APP=app.py
