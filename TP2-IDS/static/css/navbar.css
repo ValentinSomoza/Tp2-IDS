@@ -24,5 +24,17 @@
   background-color: #111111;
 }
 
+.navbar-logo{
+  display: nline-block;
+  vertical-align: middle;
+  width: 110px;
+}
+
+.navbar-logo img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
     
 
