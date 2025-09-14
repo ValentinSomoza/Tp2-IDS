@@ -24,17 +24,20 @@
   background-color: #111111;
 }
 
-.navbar-logo{
-  display: nline-block;
+.navbar-logo {
+  display: inline-block;
   vertical-align: middle;
-  width: 110px;
+  width: 60px;
 }
 
-.navbar-logo img{
+.navbar img {
   display: block;
   width: 100%;
   height: auto;
 }
+
+
+
 
     
 
