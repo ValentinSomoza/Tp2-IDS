@@ -11,9 +11,10 @@ Este trabajo se realiza en el marco de la cátedra del profesor Bruno Lanzillota
 - [Ronny Mamani Torrez 114779](https://github.com/MTRony)
 - [Alvaro Ricardo Avalos Aguilar 114565](https://github.com/Alvaro17-max)
 
-## Como ejecutar el proyecto:
+## Cómo ejecutar el proyecto:
 
-1 - pipenv shell
-2 - export FLASK_APP=app.py
-3 - export FLASK_DEBUG=1
-4 - flask run 
+```bash
+pipenv shell
+export FLASK_APP=app.py
+export FLASK_DEBUG=1
+flask run
