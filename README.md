@@ -6,7 +6,6 @@ El objetivo principal es adquirir experiencia práctica en el uso de las herrami
 Este trabajo se realiza en el marco de la cátedra del profesor Bruno Lanzillota, correspondiente a la materia Introducción al Desarrollo de Software.
 
 ## Integrantes del grupo
-acd
 
 - [Valentín Gabriel Somoza 109188](https://github.com/ValentinSomoza)
 - [Ronny Mamani Torrez 114779](https://github.com/MTRony)

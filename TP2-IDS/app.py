@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route("/")
 
 def index():
-    title = "Club Social y Deportivo Unidos Por El Deporte"
+    title = "Club"
     return render_template('index.html',page_title = title)
 
 if __name__ == "__main__":
