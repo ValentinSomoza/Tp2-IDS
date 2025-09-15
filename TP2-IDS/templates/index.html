@@ -19,7 +19,7 @@
             <div class="navbar-logo" href="static/images/MTB2.png">
                 <img src="static/images/MTB2.png">
             </div>
-            
+        
                 <li><a href="#header">Inicio</a></li>
                 <li><a href="#one">Evento</a></li>
                 <li><a href="#two">Recorrido</a></li>
@@ -32,7 +32,7 @@
 				<div class="inner">
 					<li><img src="{{ url_for('static', filename='images/frontLogo.png') }}" alt="Icono 0" width="400" height="auto"></li>
 					<h1><strong>Club Social y Deportivo Unidos por el Deporte</strong></h1>
-					<p>Pagina oficial del evento de ciclismo MTB rural</p>
+					<p><strong>Pagina oficial del evento de ciclismo MTB rural</strong></p>
 					<ul class="actions special">
 						<li><a href="#one" class="button scrolly">Inscribirse</a></li>
 					</ul>
@@ -176,12 +176,12 @@
 			<section id="four" class="main style2 special">
 				<div class="container">
 					<header class="major">
-						<h2>Ipsum feugiat consequat?</h2>
+						<h2>Informacion relevante</h2>
 					</header>
-					<p>Sed lacus nascetur ac ante amet sapien.</p>
+					<p>Descarga el reglamento y el deslinde aqui</p>
 					<ul class="actions special">
-						<li><a href="#" class="button wide primary">Registrarse</a></li>
-						<li><a href="#" class="button wide">Leer Mas</a></li>
+						<li><a href="#" class="button wide primary">Reglamento</a></li>
+						<li><a href="#" class="button wide primary">Deslinde</a></li>
 					</ul>
 				</div>
 			</section>
@@ -506,15 +506,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 		<!-- Footer -->
 			<section id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				<ul class="footer-info">
+					<li>
+						<img src="{{ url_for('static', filename='static/images/github.png') }}" alt="GitHub" class="footer-icon">
+						<span class="footer-text">
+							<a href="https://github.com/ValentinSomoza/Tp2-IDS" target="_blank" rel="noopener noreferrer">
+								Proyecto
+							</a>
+						</span>
+					</li>
+					<li>
+						<img src="{{ url_for('static', filename='static/images/wsp.png') }}" alt="WhatsApp" class="footer-icon">
+						<span class="footer-text">
+							<a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer">
+								+54 9 11 2345-6789
+							</a>
+						</span>
+					</li>
+					<li>
+						<img src="{{ url_for('static', filename='static/images/mail.png') }}" alt="Email" class="footer-icon">
+						<span class="footer-text">
+							<a href="mailto:ejemplo@email.com">
+								ejemplo@email.com
+							</a>
+						</span>
+					</li>
 				</ul>
 			</section>
 
