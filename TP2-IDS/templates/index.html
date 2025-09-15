@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="static/css/navbar.css" />
 		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
 		<link rel="icon" href="{{ url_for('static', filename='images/icono.ico') }}" type="image/png">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
 
 	</head>
@@ -30,13 +30,11 @@
 		<!-- Header -->
 			<section id="header">
 				<div class="inner">
-					<span class="icon solid major fa-cloud"></span>
-					<h1>Hola  Hola! somos de <strong>River</strong>.<br />
-					Esto es una prueba en html.index</a>.</h1>
-					<p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
-					lobortis feugiat sapien sed etiam volutpat accumsan.</p>
+					<li><img src="{{ url_for('static', filename='images/frontLogo.png') }}" alt="Icono 0" width="400" height="auto"></li>
+					<h1><strong>Club Social y Deportivo Unidos por el Deporte</strong></h1>
+					<p>Pagina oficial del evento de ciclismo MTB rural</p>
 					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Descubrir</a></li>
+						<li><a href="#one" class="button scrolly">Inscribirse</a></li>
 					</ul>
 				</div>
 			</section>
@@ -53,17 +51,17 @@
 
 						<p>El recorrido arranca desde la FIUBA hasta el Congreso para quejarnos de la situación financiera de la institución</p>
 
+						<h2>Mapa del Recorrido</h2>
+
 						<div id="mapContainer">
 							<iframe 
-								src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d9022.981556276556!2d-58.371919543901974!3d-34.61470299735378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e1!4m5!1s0x95bcca98f0058631%3A0x98688c83fc192f2e!2sUBA%2C%20Facultad%20de%20Ingenier%C3%ADa%20-%20Sede%20Paseo%20Col%C3%B3n%2C%20Av.%20Paseo%20Col%C3%B3n%20850%2C%20C1063%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!3m2!1d-34.6175841!2d-58.368228599999995!4m5!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina%2C%20Av.%20Entre%20R%C3%ADos%2C%20C1033%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!3m2!1d-34.6098208!2d-58.392606099999995!5e0!3m2!1ses!2sar!4v1757963412153!5m2!1ses!2sar"								width="600" 
+								src="https://www.google.com/maps/d/u/0/embed?mid=1T0AutS0XBtSbQTLyK-XseOV9Ir664f4&ehbc=2E312F&noprof=1"
+								width="100%" 
 								height="600" 
 								style="border:0;" 
-								allowfullscreen="" 
-								loading="lazy" 
-								referrerpolicy="no-referrer-when-downgrade">
+								allowfullscreen>
 							</iframe>
 						</div>
-
 					</div>
 
 					<!-- Columna derecha -->
@@ -72,8 +70,8 @@
 						<div class="major"> <h3>Detalles del recorrido</h3> </div>
 
 						<ul class="info-list">
-							<li>📍 Punto de salida: Facultad de Ingeniería (FIUBA)</li>
-							<li>📍 Punto de llegada: Congreso de la Nación Argentina</li>
+							<li>📍 A - Punto de salida: Facultad de Ingeniería (FIUBA)</li>
+							<li>📍 B - Punto de llegada: Congreso de la Nación Argentina</li>
 						</ul>
 
 						<div class="major">

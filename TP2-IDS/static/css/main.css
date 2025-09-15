@@ -2807,7 +2807,9 @@ input, select, textarea {
 		}
 
 /* Main */
-
+	h1 {
+  		font-weight: bold;
+	}
 	.main {
 		padding: 6em 0 4em 0 ;
 	}
@@ -2907,18 +2909,26 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 9em 0 9em 0 ;
-		background-color: #4686a0;
-		color: rgba(255, 255, 255, 0.75);
-		background-attachment: fixed,							fixed,							fixed;
-		background-repeat:no-repeat,							no-repeat,						no-repeat;
-		background-image: url("imagescss/MTBportada.png"), url("imagescss/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
-		background-position: center,						center center,					center center;
-		background-size: cover,							cover,							cover;
-		overflow: hidden;
-		position: relative;
-		text-align: center;
-	}
+    padding: 9em 0 9em 0;
+    background-color: #4686a0;
+    color: rgba(255, 255, 255, 0.75);
+
+    background-image: 
+        linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), 
+        url("imagescss/MTBportada.png"), 
+        url("imagescss/overlay3.svg"), 
+        linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+
+    background-attachment: fixed, fixed, fixed, fixed;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: center, center center, center center, center center;
+    background-size: cover, cover, cover, cover;
+    background-blend-mode: overlay; 
+    
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
 
 		#header a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
