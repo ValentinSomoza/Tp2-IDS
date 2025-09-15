@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="static/css/navbar.css" />
 		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
 		<link rel="icon" href="{{ url_for('static', filename='images/icono.ico') }}" type="image/png">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
 
 	</head>
 	<body class="is-preload">
@@ -43,16 +45,49 @@
 			<section id="one" class="main style1">
 				<div class="container">
 					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Campeonato de Mountain Bike<br />
-								</h2>
-							</header>
-							<p>En 2025, los Campeonatos de Mountain Bike organizado por nuestro club harán historia con dos semanas de competición, del 24 de octubre al 7 de noviembre de 2025 a las 8am.</p>
+
+					<!-- Columna izquierda-->
+					<div class="col-6 col-12-medium">
+
+						<div class="major"> <h2>Mapa del recorrido</h2> </div>
+
+						<p>El recorrido arranca desde la FIUBA hasta el Congreso para quejarnos de la situación financiera de la institución</p>
+
+						<div id="mapContainer">
+							<iframe 
+								src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d9022.981556276556!2d-58.371919543901974!3d-34.61470299735378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e1!4m5!1s0x95bcca98f0058631%3A0x98688c83fc192f2e!2sUBA%2C%20Facultad%20de%20Ingenier%C3%ADa%20-%20Sede%20Paseo%20Col%C3%B3n%2C%20Av.%20Paseo%20Col%C3%B3n%20850%2C%20C1063%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!3m2!1d-34.6175841!2d-58.368228599999995!4m5!1s0x95bccac2cd859503%3A0x75cdafaaef2b946!2sCongreso%20de%20la%20Naci%C3%B3n%20Argentina%2C%20Av.%20Entre%20R%C3%ADos%2C%20C1033%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!3m2!1d-34.6098208!2d-58.392606099999995!5e0!3m2!1ses!2sar!4v1757963412153!5m2!1ses!2sar"								width="600" 
+								height="600" 
+								style="border:0;" 
+								allowfullscreen="" 
+								loading="lazy" 
+								referrerpolicy="no-referrer-when-downgrade">
+							</iframe>
 						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="static/images/pic01.jpg" alt="" /></span>
+
+					</div>
+
+					<!-- Columna derecha -->
+					<div class="col-6 col-12-medium">
+
+						<div class="major"> <h3>Detalles del recorrido</h3> </div>
+
+						<ul class="info-list">
+							<li>📍 Punto de salida: Facultad de Ingeniería (FIUBA)</li>
+							<li>📍 Punto de llegada: Congreso de la Nación Argentina</li>
+						</ul>
+
+						<div class="major">
+							<h4>💧 Puntos de hidratación:</h4>
+							<ul class="info-list">
+								<li>1 - LUGAR1</li>
+								<li>2 - LUGAR2</li>
+								<li>3 - LUGAR3</li>
+							</ul>
 						</div>
+
+					</div>
+
+
 					</div>
 				</div>
 			</section>
@@ -61,25 +96,44 @@
 			<section id="two" class="main style2">
 				<div class="container">
 					<div class="row gtr-150">
+
+						<!-- Columna izquierda: iconos en cuadrícula -->
 						<div class="col-6 col-12-medium">
-							<ul class="major-icons">
-								<li><span class="icon solid style1 major fa-code"></span></li>
-								<li><span class="icon solid style2 major fa-bolt"></span></li>
-								<li><span class="icon solid style3 major fa-camera-retro"></span></li>
-								<li><span class="icon solid style4 major fa-cog"></span></li>
-								<li><span class="icon solid style5 major fa-desktop"></span></li>
-								<li><span class="icon solid style6 major fa-calendar"></span></li>
+							<ul class="major-icons-grid">
+								<li><img src="{{ url_for('static', filename='images/auspiciantes/lockheedMartin.png') }}" alt="Icono 1" class="major-icon"></li>
+								<li><img src="{{ url_for('static', filename='images/auspiciantes/Rosamonte.png') }}" alt="Icono 2" class="major-icon"></li>
+								<li><img src="{{ url_for('static', filename='images/auspiciantes/Shimano.png') }}" alt="Icono 3" class="major-icon"></li>
+								<li><img src="{{ url_for('static', filename='images/auspiciantes/Gatorade.png') }}" alt="Icono 4" class="major-icon"></li>
+								<li><img src="{{ url_for('static', filename='images/auspiciantes/US.png') }}" alt="Icono 5" class="major-icon"></li>
+								<li><img src="{{ url_for('static', filename='images/auspiciantes/Barraza.png') }}" alt="Icono 6" class="major-icon"></li>
 							</ul>
 						</div>
+
+						<!-- Columna derecha: texto -->
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
+								<h2>Auspiciantes</h2>
 							</header>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+
+							<strong>Lockheed Martin</strong> 
+							<span>Líder mundial en defensa, aviación y tecnología militar avanzada.</span><br><br>
+
+							<strong>Rosamonte</strong> 
+							<span>Tradicional empresa argentina dedicada a la producción de yerba mate.</span><br><br>
+
+							<strong>Shimano</strong> 
+							<span>Fabricante japonés líder en componentes de ciclismo, pesca y remo.</span><br><br>
+
+							<strong>Gatorade</strong> 
+							<span>Bebida deportiva global enfocada en hidratación y rendimiento físico.</span><br><br>
+
+							<strong>Departamento de defensa de los Estados Unidos</strong> 
+							<span>Institución gubernamental encargada de seguridad nacional y defensa militar.</span><br><br>
+
+							<strong>Barraza</strong> 
+							<span>Marca argentina reconocida por sus lacteos de calidad.</span><br><br>
 						</div>
+
 					</div>
 				</div>
 			</section>

@@ -4,9 +4,8 @@ app = Flask(__name__)
 @app.route("/")
 
 def index():
-    title = "Club"
+    title = "Club Social y Deportivo Unidos por el Deporte"
     return render_template('index.html',page_title = title)
 
 if __name__ == "__main__":
     app.run("127.0.0.1", port="5000", debug=True)
-    
