@@ -2026,6 +2026,14 @@ input, select, textarea {
 		line-height: 1.5em;
 		margin-top: -0.6em;
 	}
+	.major-title {
+		font-size: 2em;
+		font-weight: 500;
+		text-shadow: none;
+		color: #555;
+		margin-bottom: 0.5em;
+		text-align: center;
+	}
 
 	header.major {
 		margin: 0 0 1em 0;
@@ -2819,11 +2827,27 @@ input, select, textarea {
 		}
 
 		.main.style2 {
-			background-color: #686868;
-			color: rgba(255, 255, 255, 0.75);
-			background-attachment: fixed,							fixed;
-			background-image: url("images/overlay1.png"), url("../../images/header.jpg");
-			background-size: auto,							cover;
+			padding: 8em 0 8em 0;
+			color: rgba(255, 255, 255, 0.85);
+
+			background-image: 
+				linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+				url("images/overlay1.png"),
+				url("../../images/header.jpg"),
+				linear-gradient(135deg, #696969aa 10%, #5643ff60 50%, #0077ffaa);
+
+			background-attachment: fixed, fixed, fixed, fixed;
+			background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+			background-position: center, center, center, center;
+			background-size: cover, cover, cover, cover;
+			background-blend-mode: overlay;
+
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+
+			transition: background 0.8s ease-in-out, color 0.5s ease;
+
 		}
 
 			.main.style2 a {
@@ -2917,7 +2941,7 @@ input, select, textarea {
         linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), 
         url("imagescss/MTBportada.png"), 
         url("imagescss/overlay3.svg"), 
-        linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+        linear-gradient(45deg, #ff00ea 5%, #00ff0d41 30%, #0687ff);
 
     background-attachment: fixed, fixed, fixed, fixed;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -3114,16 +3138,26 @@ input, select, textarea {
 /* Footer */
 
 #footer {
-    padding: 6em 0;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.75);
+    padding: 3em 0;
+    color: rgba(255, 255, 255, 0.85);
+
     background-image: 
-        url("imagescss/overlay2.png"),
-        url("imagescss/overlay4.svg"),
-        linear-gradient(45deg, #4361c2, #4fa49a 50%, #9dc66b 95%);
-    background-attachment: fixed, fixed, fixed;
-    background-position: top left, center center, center center;
-    background-size: auto, cover, cover;
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("images/overlay1.png"),
+        url("../../images/header.jpg"),
+        linear-gradient(135deg, #696969aa 10%, #5643ff60 50%, #0077ffaa);
+
+    background-attachment: fixed, fixed, fixed, fixed;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: center, center, center, center;
+    background-size: cover, cover, cover, cover;
+    background-blend-mode: overlay;
+
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    transition: background 0.8s ease-in-out, color 0.5s ease;
 }
 
 #footer .footer-info {
@@ -3460,4 +3494,38 @@ input, select, textarea {
 				padding: 2em 1em 2em 1em ;
 			}
 
+	}
+
+	.col-6.col-12-medium h2,
+	.col-6.col-12-medium strong,
+	.col-6.col-12-medium span {
+		text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+	}
+
+	.col-6.col-12-medium h2 {
+		margin-bottom: 1em;
+		color: #fff;
+	}
+
+	.col-6.col-12-medium strong {
+		font-size: 1.3em;
+		display: block;
+		margin-bottom: 0.2em;
+		color: #fff;
+	}
+
+	.col-6.col-12-medium span {
+		font-size: 1em;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	.fade-in {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 0.8s ease, transform 0.8s ease;
+	}
+
+	.fade-in.visible {
+		opacity: 1;
+		transform: translateY(0);
 	}
