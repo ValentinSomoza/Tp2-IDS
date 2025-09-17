@@ -3209,6 +3209,22 @@ input, select, textarea {
     border-bottom: 1px solid #ffffff;
 }
 
+#footer .footer-legal-CSYDPUP {
+	display: inline-flex;
+	margin-top: 1em;
+	font-size: 0.9em;
+	color: rgba(255, 255, 255, 0.6);
+	gap: 0.5em;
+}
+
+#footer .footer-legal-list {
+	list-style: none;
+	display: inline-flex;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.9em;
+}
+
+
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
