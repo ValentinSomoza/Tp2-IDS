@@ -4,9 +4,9 @@
 		<title>{{page_title}}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="static/css/main.css" />
-        <link rel="stylesheet" href="static/css/navbar.css" />
-		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
 		<link rel="icon" href="{{ url_for('static', filename='images/icono.ico') }}" type="image/png">
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
@@ -140,7 +140,7 @@
 					<p>La bicicleta de montaña o mountain bike (MTB por sus siglas en inglés), engloba el mayor conjunto de modalidades dentro del ciclismo. Desde las practicadas dentro de parques o circuitos hasta las que recorren caminos y senderos.</p>
 					<div class="row gtr-150">
 						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="static/images/pic02.jpg" alt="" /></span>
+							<span class="image fit"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
 							<h3>Cross Country (XC)</h3>
 							<p>La disciplina más conocida implica pedaleo en senderos con dificultades técnicas como piedras y barro. Se enfoca más en el físico que en la técnica, y en competiciones de XC se recorren entre 10 y 40 Km con alto rendimiento.</p>
 							<ul class="actions special">
@@ -148,7 +148,7 @@
 							</ul>
 						</div>
 						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="static/images/pic03.jpg" alt="" /></span>
+							<span class="image fit"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" /></span>
 							<h3>All Mountain (AM)</h3>
 							<p>El All Mountain combina diversas modalidades, exigiendo habilidad técnica por sus pronunciadas subidas y descensos complejos, con recorridos promedio que oscilan entre 20 y 40 km, alcanzando cimas montañosas.</p>
 							<ul class="actions special">
@@ -156,7 +156,7 @@
 							</ul>
 						</div>
 						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="static/images/pic04.jpg" alt="" /></span>
+							<span class="image fit"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
 							<h3>Trail</h3>
 							<p>El Trail está entre el Cross Country y el All Mountain. Es una modalidad no competitiva que busca disfrutar la aventura en recorridos variados pudiendo alcanzar hasta los 80km , sin excesiva dificultad, para favorecer la experiencia.</p>
 							<ul class="actions special">
@@ -232,12 +232,12 @@
 			</section>
 
 		<!-- Scripts -->
-			<script src="static/js/jquery.min.js"></script>
-			<script src="static/js/jquery.scrolly.min.js"></script>
-			<script src="static/js/browser.min.js"></script>
-			<script src="static/js/breakpoints.min.js"></script>
-			<script src="static/js/util.js"></script>
-			<script src="static/js/main.js"></script>
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 	</body>
 </html>
