@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>{% block title %}Mi Página{% endblock %}</title>
+
+        {% block head_content %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
+        <noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
+        <link rel="icon" href="{{ url_for('static', filename='images/icono.ico') }}" type="image/png">
+        {% endblock %}
+    </head>
+    
+    <body class="is-preload">
+        {% block content %}{% endblock %}
+    </body>
+</html>

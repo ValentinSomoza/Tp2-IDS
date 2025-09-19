@@ -1,243 +1,179 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>{{page_title}}</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
-		<link rel="icon" href="{{ url_for('static', filename='images/icono.ico') }}" type="image/png">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
-		
+{% extends "base.html" %}
 
-	</head>
-	<body class="is-preload">
+{% block title %}Inicio{% endblock %}
 
-        <!-- Navbar -->
-           <ul class="navbar">
-                <li><a href="#header">Inicio</a></li>
-                <li><a href="#one">Recorridos</a></li>
-                <li><a href="#two">Auspiciantes</a></li>
-                <li><a href="#three">Modalidades</a></li>
-                <li><a href="#four">Registrarse</a></li>
-        	</ul>
+{% block content %}
 
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">
-					<li><img src="{{ url_for('static', filename='images/frontLogo.png') }}" alt="Icono 0" width="400" height="auto"></li>
-					<h1><strong>Club Social y Deportivo Unidos por el Deporte</strong></h1>
-					<p><strong>Pagina oficial del evento de ciclismo MTB rural</strong></p>
-					<ul class="actions special">
-						<li><a href="{{ url_for('registro') }}" class="button"><strong>Inscribirse</strong></a></li>
-					</ul>
-				</div>
-			</section>
+<!-- navbar -->
+<ul class="navbar">
+    <li><a href="#header">Inicio</a></li>
+    <li><a href="#one">Recorridos</a></li>
+    <li><a href="#two">Auspiciantes</a></li>
+    <li><a href="#three">Modalidades</a></li>
+    <li><a href="#four">Registrarse</a></li>
+</ul>
 
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
+<!-- header -->
+<section id="header">
+    <div class="inner">
+        <li><img src="{{ url_for('static', filename='images/frontLogo.png') }}" alt="Icono 0" width="400"></li>
+        <h1><strong>Club Social y Deportivo Unidos por el Deporte</strong></h1>
+        <p><strong>Página oficial del evento de ciclismo MTB rural</strong></p>
+        <ul class="actions special">
+            <li><a href="{{ url_for('registro') }}" class="button"><strong>Inscribirse</strong></a></li>
+        </ul>
+    </div>
+</section>
 
-					<!-- Columna izquierda-->
-					<div class="col-6 col-12-medium">
+<section id="one" class="main style1">
+    <div class="container">
+        <div class="row gtr-150">
+            <!-- columna izquierda-->
+            <div class="col-6 col-12-medium">
+                <div class="major-title">Mapa del recorrido</div>
+                <p>El recorrido arranca desde la FIUBA hasta el Congreso para quejarnos de la situación financiera de la institución</p>
+                <div id="mapContainer">
+                    <iframe 
+                        src="https://www.google.com/maps/d/u/0/embed?mid=1T0AutS0XBtSbQTLyK-XseOV9Ir664f4&ehbc=2E312F&noprof=1"
+                        width="100%" 
+                        height="600" 
+                        style="border:0;" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
 
-						<div class="major-title">Mapa del recorrido</div>
+            <!-- columna derecha -->
+            <div class="col-6 col-12-medium">
+                <div class="major"><h3>Detalles del recorrido</h3></div>
+                <ul class="info-list">
+                    <li>📍 A - Punto de salida: Facultad de Ingeniería (FIUBA)</li>
+                    <li>📍 B - Punto de llegada: Congreso de la Nación Argentina</li>
+                </ul>
+                <div class="major">
+                    <h4>💧 Puntos de hidratación:</h4>
+                    <ul class="info-list">
+                        <li>1 - Carlos Calvo 491, C1102AAI Cdad. Autónoma de Buenos Aires</li>
+                        <li>2 - Chile 1805, C1227 Cdad. Autónoma de Buenos Aires</li>
+                        <li>3 - Rincón 292, C1081ABF Cdad. Autónoma de Buenos Aires</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-						<p>El recorrido arranca desde la FIUBA hasta el Congreso para quejarnos de la situación financiera de la institución</p>
+<section id="two" class="main style2">
+    <div class="container">
+        <div class="row gtr-150">
+            <div class="col-6 col-12-medium">
+                <ul class="major-icons-grid">
+                    <li><img src="{{ url_for('static', filename='images/auspiciantes/lockheedMartin.png') }}" alt="Icono 1" class="major-icon"></li>
+                    <li><img src="{{ url_for('static', filename='images/auspiciantes/Rosamonte.png') }}" alt="Icono 2" class="major-icon"></li>
+                    <li><img src="{{ url_for('static', filename='images/auspiciantes/Shimano.png') }}" alt="Icono 3" class="major-icon"></li>
+                    <li><img src="{{ url_for('static', filename='images/auspiciantes/Gatorade.png') }}" alt="Icono 4" class="major-icon"></li>
+                    <li><img src="{{ url_for('static', filename='images/auspiciantes/US.png') }}" alt="Icono 5" class="major-icon"></li>
+                    <li><img src="{{ url_for('static', filename='images/auspiciantes/Barraza.png') }}" alt="Icono 6" class="major-icon"></li>
+                </ul>
+            </div>
+            <div class="col-6 col-12-medium">
+                <header class="major">
+                    <h2>Auspiciantes</h2>
+                </header>
+                <strong>Lockheed Martin</strong> 
+                <span>Líder mundial en defensa, aviación y tecnología militar avanzada.</span><br><br>
+                <strong>Rosamonte</strong> 
+                <span>Tradicional empresa argentina dedicada a la producción de yerba mate.</span><br><br>
+                <strong>Shimano</strong> 
+                <span>Fabricante japonés líder en componentes de ciclismo, pesca y remo.</span><br><br>
+                <strong>Gatorade</strong> 
+                <span>Bebida deportiva global enfocada en hidratación y rendimiento físico.</span><br><br>
+                <strong>Departamento de defensa de los Estados Unidos</strong> 
+                <span>Institución gubernamental encargada de seguridad nacional y defensa militar.</span><br><br>
+                <strong>Barraza</strong> 
+                <span>Marca argentina reconocida por sus lácteos de calidad.</span><br><br>
+            </div>
+        </div>
+    </div>
+</section>
 
-						<div id="mapContainer">
-							<iframe 
-								src="https://www.google.com/maps/d/u/0/embed?mid=1T0AutS0XBtSbQTLyK-XseOV9Ir664f4&ehbc=2E312F&noprof=1"
-								width="100%" 
-								height="600" 
-								style="border:0;" 
-								allowfullscreen>
-							</iframe>
-						</div>
-					</div>
+<section id="three" class="main style1 special">
+    <div class="container">
+        <header class="major">
+            <h2>Modalidades de ciclismo</h2>
+        </header>
+        <p>La bicicleta de montaña o mountain bike (MTB por sus siglas en inglés), engloba el mayor conjunto de modalidades dentro del ciclismo...</p>
+        <div class="row gtr-150">
+            <div class="col-4 col-12-medium">
+                <span class="image fit"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
+                <h3>Cross Country (XC)</h3>
+                <p>La disciplina más conocida implica pedaleo en senderos con dificultades técnicas...</p>
+            </div>
+            <div class="col-4 col-12-medium">
+                <span class="image fit"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" /></span>
+                <h3>All Mountain (AM)</h3>
+                <p>El All Mountain combina diversas modalidades, exigiendo habilidad técnica...</p>
+            </div>
+            <div class="col-4 col-12-medium">
+                <span class="image fit"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
+                <h3>Trail</h3>
+                <p>El Trail está entre el Cross Country y el All Mountain...</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-					<!-- Columna derecha -->
-					<div class="col-6 col-12-medium">
+<section id="four" class="main style2 special">
+    <div class="container">
+        <header class="major">
+            <h2>Información relevante</h2>
+        </header>
+        <p>Descarga el reglamento y el deslinde</p>
+        <ul class="actions special">
+            <li><a href="#" class="button wide primary">Reglamento</a></li>
+            <li><a href="#" class="button wide primary">Deslinde</a></li>
+        </ul>
+    </div>
+</section>
 
-						<div class="major"> <h3>Detalles del recorrido</h3> </div>
+<!-- footer -->
+<section id="footer">
+    <ul class="footer-info">
+        <li>
+            <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="footer-icon" width="20">
+            <span class="footer-text">
+                <a href="https://github.com/ValentinSomoza/Tp2-IDS" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </span>
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/wsp.png') }}" alt="WhatsApp" class="footer-icon" width="20">
+            <span class="footer-text">
+                <a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer">+54 9 11 2345-6789</a>
+            </span>
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/mail.png') }}" alt="Email" class="footer-icon" width="20">
+            <span class="footer-text">
+                <a href="mailto:ejemplo@email.com">ejemplo@email.com</a>
+            </span>
+        </li>
+    </ul>
+    <section id="footer-legal">
+        <p class="footer-legal-CSYDPUP">Club Social Y Deportivo Unidos Por El Deporte &copy; 2025 Todos los derechos reservados</p>
+        <ul class="footer-legal-list">
+            <li><a href="http://Aviso-legal.html">Aviso-legal</a></li>
+            <li><a href="http://Política-de-privacidad.html">Política de privacidad</a></li>
+            <li><a href="http://Política-de-cookies.html">Política de cookies</a></li>
+        </ul>
+    </section>
+</section>
 
-						<ul class="info-list">
-							<li>📍 A - Punto de salida: Facultad de Ingeniería (FIUBA)</li>
-							<li>📍 B - Punto de llegada: Congreso de la Nación Argentina</li>
-						</ul>
+<!-- scripts -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-						<div class="major">
-							<h4>💧 Puntos de hidratación:</h4>
-							<ul class="info-list">
-								<li>1 -  Carlos Calvo 491, C1102AAI Cdad. Autónoma de Buenos Aires</li>
-								<li>2 -  Chile 1805, C1227 Cdad. Autónoma de Buenos Aires </li>
-								<li>3 -  Rincón 292, C1081ABF Cdad. Autónoma de Buenos Aires</li>
-							</ul>
-						</div>
-
-					</div>
-
-
-					</div>
-				</div>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="main style2">
-				<div class="container">
-					<div class="row gtr-150">
-
-						<!-- Columna izquierda -->
-						<div class="col-6 col-12-medium">
-							<ul class="major-icons-grid">
-								<li><img src="{{ url_for('static', filename='images/auspiciantes/lockheedMartin.png') }}" alt="Icono 1" class="major-icon"></li>
-								<li><img src="{{ url_for('static', filename='images/auspiciantes/Rosamonte.png') }}" alt="Icono 2" class="major-icon"></li>
-								<li><img src="{{ url_for('static', filename='images/auspiciantes/Shimano.png') }}" alt="Icono 3" class="major-icon"></li>
-								<li><img src="{{ url_for('static', filename='images/auspiciantes/Gatorade.png') }}" alt="Icono 4" class="major-icon"></li>
-								<li><img src="{{ url_for('static', filename='images/auspiciantes/US.png') }}" alt="Icono 5" class="major-icon"></li>
-								<li><img src="{{ url_for('static', filename='images/auspiciantes/Barraza.png') }}" alt="Icono 6" class="major-icon"></li>
-							</ul>
-						</div>
-
-						<!-- Columna derecha -->
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Auspiciantes</h2>
-							</header>
-
-							<strong>Lockheed Martin</strong> 
-							<span>Líder mundial en defensa, aviación y tecnología militar avanzada.</span><br><br>
-
-							<strong>Rosamonte</strong> 
-							<span>Tradicional empresa argentina dedicada a la producción de yerba mate.</span><br><br>
-
-							<strong>Shimano</strong> 
-							<span>Fabricante japonés líder en componentes de ciclismo, pesca y remo.</span><br><br>
-
-							<strong>Gatorade</strong> 
-							<span>Bebida deportiva global enfocada en hidratación y rendimiento físico.</span><br><br>
-
-							<strong>Departamento de defensa de los Estados Unidos</strong> 
-							<span>Institución gubernamental encargada de seguridad nacional y defensa militar.</span><br><br>
-
-							<strong>Barraza</strong> 
-							<span>Marca argentina reconocida por sus lacteos de calidad.</span><br><br>
-						</div>
-
-					</div>
-				</div>
-			</section>
-
-		<!-- Three -->
-			<section id="three" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Modalidades de ciclismo</h2>
-					</header>
-					<p>La bicicleta de montaña o mountain bike (MTB por sus siglas en inglés), engloba el mayor conjunto de modalidades dentro del ciclismo. Desde las practicadas dentro de parques o circuitos hasta las que recorren caminos y senderos.</p>
-					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
-							<h3>Cross Country (XC)</h3>
-							<p>La disciplina más conocida implica pedaleo en senderos con dificultades técnicas como piedras y barro. Se enfoca más en el físico que en la técnica, y en competiciones de XC se recorren entre 10 y 40 Km con alto rendimiento.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" /></span>
-							<h3>All Mountain (AM)</h3>
-							<p>El All Mountain combina diversas modalidades, exigiendo habilidad técnica por sus pronunciadas subidas y descensos complejos, con recorridos promedio que oscilan entre 20 y 40 km, alcanzando cimas montañosas.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
-							<h3>Trail</h3>
-							<p>El Trail está entre el Cross Country y el All Mountain. Es una modalidad no competitiva que busca disfrutar la aventura en recorridos variados pudiendo alcanzar hasta los 80km , sin excesiva dificultad, para favorecer la experiencia.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		<!-- Four -->
-			<section id="four" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Informacion relevante</h2>
-					</header>
-					<p>Descarga el reglamento y el deslinde</p>
-					<ul class="actions special">
-						<li><a href="#" class="button wide primary">Reglamento</a></li>
-						<li><a href="#" class="button wide primary">Deslinde</a></li>
-					</ul>
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="footer-info">
-					<li>
-						<img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="footer-icon"width="20" height="auto">
-						<span class="footer-text">
-							<a href="https://github.com/ValentinSomoza/Tp2-IDS" target="_blank" rel="noopener noreferrer">
-								GitHub
-							</a>
-						</span>
-					</li>
-					<li>
-						<img src="{{ url_for('static', filename='images/wsp.png') }}" alt="WhatsApp" class="footer-icon"width="20" height="auto">
-						<span class="footer-text">
-							<a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer">
-								+54 9 11 2345-6789
-							</a>
-						</span>
-					</li>
-					<li>
-						<img src="{{ url_for('static', filename='images/mail.png') }}" alt="Email" class="footer-icon" width="20" height="auto">
-						<span class="footer-text">
-							<a href="mailto:ejemplo@email.com">
-								ejemplo@email.com
-							</a>
-						</span>
-					</li>
-				</ul>
-				<section id="footer-legal">
-					<p class="footer-legal-CSYDPUP">Club Social Y deportivo Unidos Por El Deporte &copy; 2025 Todos los derechos reservados</p>
-					<ul class="footer-legal-list">
-						<li>
-							<a href="http://Aviso-legal.html">
-								Aviso-legal
-							</a>
-						</li>
-						<li> 
-							<a href="http://Política-de-privacidad.html">
-								Política de privacidad
-							</a>
-						</li>
-						<li>
-							<a href="http://Política-de-cookies.html">
-								Política de cookies
-							</a>
-						</li>
-					</ul>
-				</section>
-			</section>
-
-		<!-- Scripts -->
-			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
-	</body>
-</html>
+{% endblock %}

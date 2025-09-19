@@ -1,39 +1,23 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>{{ page_title }}</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+{% extends "base.html" %}
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
-    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
-    <link rel="icon" href="{{ url_for('static', filename='images/icono.ico') }}" type="image/png">
+{% block title %}Registro{% endblock %}
 
-</head>
+{% block content %}
+<div class="form-container">
+    <form id="registroForm" action="{{ url_for('registro')}}" method="post">
+        <label for="firstname">Nombre:</label>
+        <input type="text" id="firstname" name="fname" placeholder="Nombre" required>
+        <label for="lastname">Apellido:</label>
+        <input type="text" id="lastname" name="lname" placeholder="Apellido" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
 
-<body class="is-preload">
+<div id="mensaje">Formulario enviado!</div>
 
-    <div class="form-container">
-        <form id="registroForm" action="{{ url_for('registro')}}" method="post">
-            <label for="firstname">Nombre:</label>
-            <input type="text" id="firstname" name="fname" placeholder="Nombre" required>
-            <label for="lastname">Apellido:</label>
-            <input type="text" id="lastname" name="lname" placeholder="Apellido" required>
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-
-
-    <div id="mensaje">Formulario enviado!</div>
-
-    <script src="{{ url_for('static', filename='js/registro.js') }}"></script>
-    <script>
-        const enviado = "{{ enviado }}".toLowerCase() === "true";
-    </script>
-</body>
-</html>
+<script src="{{ url_for('static', filename='js/registro.js') }}"></script>
+<script>
+    const enviado = "{{ enviado }}".toLowerCase() === "true";
+</script>
+{% endblock %}
