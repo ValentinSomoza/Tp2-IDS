@@ -1,17 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}Inicio{% endblock %}
+{% block title %}Inicio{% endblock %}flask runn
 
 {% block content %}
 
 <!-- navbar -->
-<ul class="navbar">
-    <li><a href="#header">Inicio</a></li>
-    <li><a href="#one">Recorridos</a></li>
-    <li><a href="#two">Auspiciantes</a></li>
-    <li><a href="#three">Modalidades</a></li>
-    <li><a href="#four">Registrarse</a></li>
-</ul>
 
 <!-- header -->
 <section id="header">
@@ -137,36 +130,6 @@
 </section>
 
 <!-- footer -->
-<section id="footer">
-    <ul class="footer-info">
-        <li>
-            <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="footer-icon" width="20">
-            <span class="footer-text">
-                <a href="https://github.com/ValentinSomoza/Tp2-IDS" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </span>
-        </li>
-        <li>
-            <img src="{{ url_for('static', filename='images/wsp.png') }}" alt="WhatsApp" class="footer-icon" width="20">
-            <span class="footer-text">
-                <a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer">+54 9 11 2345-6789</a>
-            </span>
-        </li>
-        <li>
-            <img src="{{ url_for('static', filename='images/mail.png') }}" alt="Email" class="footer-icon" width="20">
-            <span class="footer-text">
-                <a href="mailto:ejemplo@email.com">ejemplo@email.com</a>
-            </span>
-        </li>
-    </ul>
-    <section id="footer-legal">
-        <p class="footer-legal-CSYDPUP">Club Social Y Deportivo Unidos Por El Deporte &copy; 2025 Todos los derechos reservados</p>
-        <ul class="footer-legal-list">
-            <li><a href="http://Aviso-legal.html">Aviso-legal</a></li>
-            <li><a href="http://Política-de-privacidad.html">Política de privacidad</a></li>
-            <li><a href="http://Política-de-cookies.html">Política de cookies</a></li>
-        </ul>
-    </section>
-</section>
 
 <!-- scripts -->
 <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
