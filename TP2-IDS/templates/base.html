@@ -31,15 +31,90 @@
         </ul>
 
 
-         {% endblock %}
+        {% endblock %}
 
         {% block content %}{% endblock %}
 
         <!-- footer -->
 
-      {% block footer %}
-      
-        <section id="footer">
+        {% block footer %}
+
+    <section id="footer">
+        <div id="footer-auspiciantes">
+            <h2 class="footer-auspiciantes-title">Auspiciantes</h2>
+            <ul class="footer-info">
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/5Hispanos.png') }}" alt="Auspiciante 1" class="footer-patrocinador" width="250px">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/Barraza.png') }}" alt="Auspiciante 2" class="footer-patrocinador" width="250px">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/EpicBike25-2.png') }}" alt="Auspiciante 3" class="footer-patrocinador" width="250px">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/Gatorade.png') }}" alt="Auspiciante 4" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/lockheedMartin.png') }}" alt="Auspiciante 5" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/Magenta-2.png') }}" alt="Auspiciante 6" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/MellMell.png') }}" alt="Auspiciante 7" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/Nutremax25.png') }}" alt="Auspiciante 8" class="footer-patrocinador" >
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/RioCordillerano25.png') }}" alt="Auspiciante 9" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/Rosamonte.png') }}" alt="Auspiciante 10" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/Samurai25.png') }}" alt="Auspiciante 11" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/Shimano.png') }}" alt="Auspiciante 12" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/SOX.png') }}" alt="Auspiciante 13" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='images/auspiciantes/US.png') }}" alt="Auspiciante 14" class="footer-patrocinador">
+                    <span class="footer-text">
+                        <a href=""></a></span>
+                </li>
+            </ul>
+        </div>
         <ul class="footer-info">
             <li>
                 <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="footer-icon" width="20">

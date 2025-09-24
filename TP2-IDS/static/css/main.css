@@ -3159,6 +3159,10 @@ input, select, textarea {
 
     transition: background 0.8s ease-in-out, color 0.5s ease;
 }
+#footer-auspiciantes {
+	margin: 20px;
+	padding: 0px;
+}
 
 #footer .footer-info {
     list-style: none;
@@ -3177,6 +3181,11 @@ input, select, textarea {
     transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
     font-size: 1em;
+}
+
+#footer .footer-patrocinador {
+	width: auto;
+	height: 100px;
 }
 
 #footer .footer-icon {
@@ -3209,9 +3218,14 @@ input, select, textarea {
     border-bottom: 1px solid #ffffff;
 }
 
+#footer-legal {
+	background-color: #333;
+	width: 100%;
+	margin: 0px;
+}
 #footer .footer-legal-CSYDPUP {
 	display: inline-flex;
-	margin-top: 1em;
+	margin-top: 2em;
 	font-size: 0.9em;
 	color: rgba(255, 255, 255, 0.6);
 	gap: 0.5em;
