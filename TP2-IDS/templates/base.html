@@ -23,6 +23,7 @@
          {% block navbar %}
 
         <ul class="navbar">
+            <li><img src="{{ url_for('static', filename='images/frontLogo.png')}}" alt="Logo"></li>
             <li><a href="{{ url_for('home')}}#inicio">Inicio</a></li>
             <li><a href="{{ url_for('home')}}#recorrido">Recorridos</a></li>
             <li><a href="{{ url_for('home')}}#auspiciantes">Auspiciantes</a></li>
