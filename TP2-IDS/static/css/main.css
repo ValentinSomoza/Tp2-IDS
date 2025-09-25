@@ -3138,7 +3138,7 @@ input, select, textarea {
 /* Footer */
 
 #footer {
-    padding: 3em 0;
+    padding: 0 0 0 0;
     color: rgba(255, 255, 255, 0.85);
 
     background-image: 
@@ -3189,11 +3189,18 @@ input, select, textarea {
     color: inherit;
 	border-bottom: none;
 }
+#footer-legal {
+	background-color: #333;
+	width: 100%;
+	height: auto;
+	margin: 0em;
+	padding: 0.5em;
+}
 
 #footer .footer-info {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0.5em;
     display: flex;
     justify-content: center;
     gap: 2em;
@@ -3244,14 +3251,9 @@ input, select, textarea {
     border-bottom: 1px solid #ffffff;
 }
 
-#footer-legal {
-	background-color: #333;
-	width: 100%;
-	margin: 0px;
-}
 #footer .footer-legal-CSYDPUP {
 	display: inline-flex;
-	margin-top: 2em;
+	margin: 0em;
 	font-size: 0.9em;
 	color: rgba(255, 255, 255, 0.6);
 	gap: 0.5em;
@@ -3259,6 +3261,8 @@ input, select, textarea {
 
 #footer .footer-legal-list {
 	list-style: none;
+	margin: 0em;
+	padding: 0em;
 	display: inline-flex;
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 0.9em;
