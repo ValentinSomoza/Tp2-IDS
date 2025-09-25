@@ -3589,3 +3589,13 @@ input, select, textarea {
 		opacity: 1;
 		transform: translateY(0);
 	}
+
+	.major-icons-grid a {
+    text-decoration: none; 
+    border-bottom: none;   
+    outline: none;     
+	}
+
+	.major-icons-grid li {
+		border-bottom: none;  
+	}
