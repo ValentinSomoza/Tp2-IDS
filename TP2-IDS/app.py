@@ -1,5 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for
+from flask_mail import Mail, Message
+
 app = Flask(__name__)
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = 'tu_correo@gmail.com'
+app.config['MAIL_PASSWORD'] = 'tu_contrasenia_app' 
+app.config['MAIL_DEFAULT_SENDER'] = 'tu_correo@gmail.com'
+
+mail = Mail(app)
 
 @app.route("/")
 def index():
@@ -10,10 +22,21 @@ def index():
 def registro():
     enviado = False
     if request.method == 'POST':
-        fname = request.form['fname']
-        lname = request.form['lname']
+        nombre = request.form.get("fname")
+        apellido = request.form.get("lname")
+        dni = request.form.get("dni")
+        carrera = request.form.get("carrera")
+
+        msg = Message(
+            subject="Nueva inscripcion en la carrera",
+            recipients=["destinatario@ejemplo.com"],
+            body=f"Se registro {nombre} {apellido}\nDNI: {dni}\nCarrera: {carrera}"
+        )
+
+        mail.send(msg)
 
         enviado = True
+
     return render_template('registro.html', page_title="Registro Evento", enviado=enviado)
 
 
