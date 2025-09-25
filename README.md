@@ -11,7 +11,7 @@ Este trabajo se realiza en el marco de la cátedra del profesor Bruno Lanzillota
 - [Ronny Mamani Torrez 114779](https://github.com/MTRony)
 - [Alvaro Ricardo Avalos Aguilar 114565](https://github.com/Alvaro17-max)
 
-## Cómo ejecutar el proyecto:
+## Cómo ejecutar el proyecto en modo debug:
 
 ```bash
 pipenv shell
