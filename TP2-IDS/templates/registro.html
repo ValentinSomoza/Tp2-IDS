@@ -13,7 +13,19 @@
         <input type="text" id="lastname" name="lname" placeholder="Apellido" required>
 
         <label for="DNI/Pasaporte">D.N.I o Pasaporte:</label>
-        <input type="text" id="dni" name="dni" placeholder="D.N.I o Pasaporte" required>
+        <input 
+        type="text" 
+        id="dni" 
+        name="dni" 
+        placeholder="D.N.I o Pasaporte" 
+        pattern="[0-9]+" 
+        inputmode="numeric" 
+        oninvalid="this.setCustomValidity('Por favor ingrese solo números en el DNI')"
+        oninput="this.setCustomValidity('')"
+        required> <!-- onvalid muestra cuando el envio falla, oninput borra el cartel cuando se ingresa algo nuevo-->
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Email" required>
 
         <label for="carrera">Inscripcion a la carrera:</label>
         <select id="carrera" name="carrera" required>
