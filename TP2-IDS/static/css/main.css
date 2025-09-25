@@ -3163,6 +3163,32 @@ input, select, textarea {
 	margin: 20px;
 	padding: 0px;
 }
+#footer-auspiciantes h2 {
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 1.5em;
+}
+#footer .footer-list-auspi {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+	flex-wrap: wrap;
+}
+#footer .footer-list-auspi li {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	transition: transform 0.3s ease, color 0.3s ease;
+	cursor: pointer;
+	font-size: 1em;
+}
+#footer .footer-list-auspi a {
+	text-decoration: none;
+    color: inherit;
+	border-bottom: none;
+}
 
 #footer .footer-info {
     list-style: none;
@@ -3208,13 +3234,13 @@ input, select, textarea {
     filter: brightness(1.2);
 }
 
-#footer a {
+#footer .footer-icon a {
     color: inherit;
     text-decoration: none;
     border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
 }
 
-#footer a:hover {
+#footer .footer-info a:hover {
     border-bottom: 1px solid #ffffff;
 }
 
