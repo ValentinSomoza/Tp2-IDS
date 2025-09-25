@@ -2932,7 +2932,7 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
+	#inicio {
     padding: 9em 0 9em 0;
     background-color: #4686a0;
     color: rgba(255, 255, 255, 0.75);
@@ -2954,95 +2954,95 @@ input, select, textarea {
     text-align: center;
 }
 
-		#header a {
+		#inicio a {
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
-			#header a:hover {
+			#inicio a:hover {
 				color: #ffffff;
 			}
 
-		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6, #header strong, #header b {
+		#inicio h1, #inicio h2, #inicio h3, #inicio h4, #inicio h5, #inicio h6, #inicio strong, #inicio b {
 			color: #ffffff;
 		}
 
-		#header header p {
+		#inicio header p {
 			color: #ffffff;
 		}
 
-		#header header.major:after {
+		#inicio header.major:after {
 			background: #ffffff;
 		}
 
-		#header input[type="submit"],
-		#header input[type="reset"],
-		#header input[type="button"],
-		#header button,
-		#header .button {
+		#inicio input[type="submit"],
+		#inicio input[type="reset"],
+		#inicio input[type="button"],
+		#inicio button,
+		#inicio .button {
 			box-shadow: inset 0 0 0 1px #ffffff;
 			color: #ffffff !important;
 		}
 
-			#header input[type="submit"]:hover,
-			#header input[type="reset"]:hover,
-			#header input[type="button"]:hover,
-			#header button:hover,
-			#header .button:hover {
+			#inicio input[type="submit"]:hover,
+			#inicio input[type="reset"]:hover,
+			#inicio input[type="button"]:hover,
+			#inicio button:hover,
+			#inicio .button:hover {
 				background-color: rgba(255, 255, 255, 0.125);
 			}
 
-			#header input[type="submit"]:active,
-			#header input[type="reset"]:active,
-			#header input[type="button"]:active,
-			#header button:active,
-			#header .button:active {
+			#inicio input[type="submit"]:active,
+			#inicio input[type="reset"]:active,
+			#inicio input[type="button"]:active,
+			#inicio button:active,
+			#inicio .button:active {
 				background-color: rgba(255, 255, 255, 0.25);
 			}
 
-			#header input[type="submit"].primary,
-			#header input[type="reset"].primary,
-			#header input[type="button"].primary,
-			#header button.primary,
-			#header .button.primary {
+			#inicio input[type="submit"].primary,
+			#inicio input[type="reset"].primary,
+			#inicio input[type="button"].primary,
+			#inicio button.primary,
+			#inicio .button.primary {
 				background-color: #ffffff;
 				box-shadow: inset 0 0 0 1px #ffffff !important;
 				color: #4686a0 !important;
 			}
 
-				#header input[type="submit"].primary:hover,
-				#header input[type="reset"].primary:hover,
-				#header input[type="button"].primary:hover,
-				#header button.primary:hover,
-				#header .button.primary:hover {
+				#inicio input[type="submit"].primary:hover,
+				#inicio input[type="reset"].primary:hover,
+				#inicio input[type="button"].primary:hover,
+				#inicio button.primary:hover,
+				#inicio .button.primary:hover {
 					background-color: rgba(255, 255, 255, 0.125) !important;
 					color: #ffffff !important;
 				}
 
-				#header input[type="submit"].primary:active,
-				#header input[type="reset"].primary:active,
-				#header input[type="button"].primary:active,
-				#header button.primary:active,
-				#header .button.primary:active {
+				#inicio input[type="submit"].primary:active,
+				#inicio input[type="reset"].primary:active,
+				#inicio input[type="button"].primary:active,
+				#inicio button.primary:active,
+				#inicio .button.primary:active {
 					background-color: rgba(255, 255, 255, 0.25) !important;
 				}
 
-		#header ul.major-icons li .icon {
+		#inicio ul.major-icons li .icon {
 			border-color: #ffffff;
 		}
 
-		#header .icon.major {
+		#inicio .icon.major {
 			color: #ffffff;
 		}
 
-		#header h1 {
+		#inicio h1 {
 			margin: 0;
 		}
 
-		#header p {
+		#inicio p {
 			margin: 1em 0 0 0;
 		}
 
-		#header .actions {
+		#inicio .actions {
 			-moz-justify-content: center;
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
@@ -3052,11 +3052,11 @@ input, select, textarea {
 			position: relative;
 		}
 
-			#header .actions li:first-child {
+			#inicio .actions li:first-child {
 				padding-left: 0;
 			}
 
-			#header .actions:after {
+			#inicio .actions:after {
 				background: #ffffff;
 				content: '';
 				height: 100vh;
@@ -3066,7 +3066,7 @@ input, select, textarea {
 				width: 1px;
 			}
 
-		#header .inner {
+		#inicio .inner {
 			-moz-transition: -moz-transform 1.5s ease, opacity 2s ease;
 			-webkit-transition: -webkit-transform 1.5s ease, opacity 2s ease;
 			-ms-transition: -ms-transform 1.5s ease, opacity 2s ease;
@@ -3084,7 +3084,7 @@ input, select, textarea {
 			z-index: 1;
 		}
 
-			#header .inner .actions {
+			#inicio .inner .actions {
 				-moz-transition: -moz-transform 1.25s ease;
 				-webkit-transition: -webkit-transform 1.25s ease;
 				-ms-transition: -ms-transform 1.25s ease;
@@ -3100,7 +3100,7 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-		#header:after {
+		#inicio:after {
 			-moz-transition: opacity 1s ease;
 			-webkit-transition: opacity 1s ease;
 			-ms-transition: opacity 1s ease;
@@ -3115,7 +3115,7 @@ input, select, textarea {
 			width: 100%;
 		}
 
-	body.is-preload #header .inner {
+	body.is-preload #inicio .inner {
 		-moz-transform: scale(1.05);
 		-webkit-transform: scale(1.05);
 		-ms-transform: scale(1.05);
@@ -3123,7 +3123,7 @@ input, select, textarea {
 		opacity: 0;
 	}
 
-		body.is-preload #header .inner .actions {
+		body.is-preload #inicio .inner .actions {
 			-moz-transform: translateY(30em);
 			-webkit-transform: translateY(30em);
 			-ms-transform: translateY(30em);
@@ -3131,7 +3131,7 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-	body.is-preload #header:after {
+	body.is-preload #inicio:after {
 		opacity: 1;
 	}
 
@@ -3281,7 +3281,7 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
+			#inicio {
 				padding: 6em 0 6em 0 ;
 			}
 
@@ -3325,12 +3325,12 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
+			#inicio {
 				padding: 5em 0 5em 0 ;
 				background-attachment: scroll;
 			}
 
-				#header br {
+				#inicio br {
 					display: inline;
 				}
 
@@ -3367,7 +3367,7 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
+			#inicio {
 				padding: 8em 3em 8em 3em ;
 			}
 
@@ -3458,11 +3458,11 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
+			#inicio {
 				padding: 4em 3em 4em 3em ;
 			}
 
-				#header .actions {
+				#inicio .actions {
 					margin: 2em 0 0 0;
 				}
 
@@ -3495,11 +3495,11 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
+			#inicio {
 				padding: 4em 2em 4em 2em ;
 			}
 
-				#header br {
+				#inicio br {
 					display: none;
 				}
 
@@ -3544,7 +3544,7 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
+			#inicio {
 				padding: 3em 1em 3em 1em ;
 			}
 

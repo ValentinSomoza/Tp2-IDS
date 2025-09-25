@@ -23,11 +23,11 @@
          {% block navbar %}
 
         <ul class="navbar">
-            <li><a href="#header">Inicio</a></li>
-            <li><a href="#one">Recorridos</a></li>
-            <li><a href="#two">Auspiciantes</a></li>
-            <li><a href="#three">Modalidades</a></li>
-            <li><a href="#four">Registrarse</a></li>
+            <li><a href="{{ url_for('home')}}#inicio">Inicio</a></li>
+            <li><a href="{{ url_for('home')}}#recorrido">Recorridos</a></li>
+            <li><a href="{{ url_for('home')}}#auspiciantes">Auspiciantes</a></li>
+            <li><a href="{{ url_for('home')}}#modalidades">Modalidades</a></li>
+            <li><a href="{{ url_for('home')}}#registrarse">Registrarse</a></li>
         </ul>
 
 

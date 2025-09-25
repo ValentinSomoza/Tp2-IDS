@@ -6,6 +6,10 @@ def index():
     title = "Club Social y Deportivo Unidos por el Deporte"
     return render_template('index.html',page_title = title)
 
+@app.route("/")
+def home():
+    return render_template ('index.html')
+
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
     enviado = False
