@@ -239,6 +239,7 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: calc(100% - 4em);
 		width: 60em;
+
 	}
 
 		.container.xsmall {
@@ -2354,6 +2355,11 @@ input, select, textarea {
 
 /* Image */
 
+	.cuadroimg{
+		overflow: hidden;
+		border-radius: 10px;
+  		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	}
 	.image {
 		border-radius: 4px;
 		border: 0;

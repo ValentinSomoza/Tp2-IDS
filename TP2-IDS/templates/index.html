@@ -21,6 +21,7 @@
 <section id="recorrido" class="main style1">
     <div class="container">
         <div class="row gtr-150">
+
             <!-- columna izquierda-->
             <div class="col-6 col-12-medium">
                 <div class="major-title">Mapa del recorrido</div>
@@ -198,26 +199,35 @@
 </section>
 
 <section id="modalidades" class="main style1 special">
-    <div class="container">
+
+    <div class="container"> <!-- primer conteiner -->
         <header class="major">
             <h2>Modalidades de ciclismo</h2>
         </header>
         <p>La bicicleta de montaña o mountain bike (MTB por sus siglas en inglés), engloba el mayor conjunto de modalidades dentro del ciclismo...</p>
         <div class="row gtr-150">
             <div class="col-4 col-12-medium">
-                <span class="image fit"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
-                <h3>Cross Country (XC)</h3>
-                <p>La disciplina más conocida implica pedaleo en senderos con dificultades técnicas...</p>
+                <div class="cuadroimg">
+                    <span class="image fit"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
+                    <h3>Cross Country (XC)</h3>
+                    <p>La disciplina más conocida implica pedaleo en senderos con dificultades técnicas...</p>
+                </div>
             </div>
+
             <div class="col-4 col-12-medium">
-                <span class="image fit"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" /></span>
-                <h3>All Mountain (AM)</h3>
-                <p>El All Mountain combina diversas modalidades, exigiendo habilidad técnica...</p>
+                <div class="cuadroimg">
+                    <span class="image fit"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" /></span>
+                    <h3>All Mountain (AM)</h3>
+                    <p>El All Mountain combina diversas modalidades, exigiendo habilidad técnica...</p>
+                </div>    
             </div>
+
             <div class="col-4 col-12-medium">
-                <span class="image fit"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
-                <h3>Trail</h3>
-                <p>El Trail está entre el Cross Country y el All Mountain...</p>
+                <div class="cuadroimg">
+                    <span class="image fit"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
+                    <h3>Trail</h3>
+                    <p>El Trail está entre el Cross Country y el All Mountain...</p>
+                </div>
             </div>
         </div>
     </div>
