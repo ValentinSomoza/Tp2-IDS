@@ -1,5 +1,21 @@
 from flask import Flask, render_template, request, redirect, url_for
+from flask_mail import Mail, Message
+from dotenv import load_dotenv
+import os
+
 app = Flask(__name__)
+
+load_dotenv()
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
+
+mail = Mail(app)
 
 @app.route("/")
 def index():
@@ -18,10 +34,25 @@ def page_not_found(e):
 def registro():
     enviado = False
     if request.method == 'POST':
-        fname = request.form['fname']
-        lname = request.form['lname']
+        nombre = request.form.get("fname")
+        apellido = request.form.get("lname")
+        dni = request.form.get("dni")
+        carrera = request.form.get("carrera")
+        correoUsuario = request.form.get("email")
 
-        enviado = True
+        msg = Message(
+            subject="Nueva inscripcion en la carrera",
+            recipients=["vsomoza@fi.uba.ar", correoUsuario],
+            body=f"Se registro el atleta llamado: {nombre} {apellido}\nDNI: {dni}\nCarrera: {carrera}"
+        )
+
+        try:
+            mail.send(msg)
+            enviado = True  # solo se activa el true si no hay error
+        except Exception as e:
+            print(f"Error al enviar correo: {e}")
+            enviado = False
+
     return render_template('registro.html', page_title="Registro Evento", enviado=enviado)
 
 
