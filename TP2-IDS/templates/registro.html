@@ -1,43 +1,48 @@
 {% extends "base.html" %}
 
-{% block title %}Registro{% endblock %}
+{% block title %}Formulario{% endblock %}
 
 {% block content %}
-<div class="form-container">
-    <form id="registroForm" action="{{ url_for('registro')}}" method="post">
+<section id="registro" class="main style2 special">
+    <h2>Formulario</h2>
+    <div class="form-container">
+        <form id="registroForm" action="{{ url_for('registro')}}" method="post">
 
-        <label for="firstname">Nombre:</label>
-        <input type="text" id="firstname" name="fname" placeholder="Nombre" required>
+            <label for="firstname">Nombre:</label>
+            <input type="text" id="firstname" name="fname" placeholder="Nombre" required>
 
-        <label for="lastname">Apellido:</label>
-        <input type="text" id="lastname" name="lname" placeholder="Apellido" required>
+            <label for="lastname">Apellido:</label>
+            <input type="text" id="lastname" name="lname" placeholder="Apellido" required>
 
-        <label for="DNI/Pasaporte">D.N.I o Pasaporte:</label>
-        <input 
-        type="text" 
-        id="dni" 
-        name="dni" 
-        placeholder="D.N.I o Pasaporte" 
-        pattern="[0-9]+" 
-        inputmode="numeric" 
-        oninvalid="this.setCustomValidity('Por favor ingrese solo números en el DNI')"
-        oninput="this.setCustomValidity('')"
-        required> <!-- onvalid muestra cuando el envio falla, oninput borra el cartel cuando se ingresa algo nuevo-->
+            <label for="DNI/Pasaporte">D.N.I o Pasaporte:</label>
+            <input 
+            type="text" 
+            id="dni" 
+            name="dni" 
+            placeholder="D.N.I o Pasaporte" 
+            pattern="[0-9]+" 
+            inputmode="numeric" 
+            oninvalid="this.setCustomValidity('Por favor ingrese solo números en el DNI')"
+            oninput="this.setCustomValidity('')"
+            required> <!-- onvalid muestra cuando el envio falla, oninput borra el cartel cuando se ingresa algo nuevo-->
 
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="Email" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
 
-        <label for="carrera">Inscripcion a la carrera:</label>
-        <select id="carrera" name="carrera" required>
-            <option value="" disabled selected>Seleccione una opcion</option>
-            <option value="corta">Carrera corta</option>
-            <option value="larga">Carrera larga</option>
-        </select>
-        
-        <br><br>
-        <button type="submit">Enviar</button>
-    </form>
-</div>
+            <label for="carrera">Inscripcion a la carrera:</label>
+            <select id="carrera" name="carrera" required>
+                <option value="" disabled selected>Seleccione una opcion</option>
+                <option value="corta">Carrera corta</option>
+                <option value="larga">Carrera larga</option>
+            </select>
+            
+            <br><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+
+</section>
 
 <div id="mensaje">Formulario enviado!</div>
 
