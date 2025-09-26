@@ -132,11 +132,11 @@
                     </span>
                 </li>
             </ul>
-            <p class="footer-legal-CSYDPUP">Club Social Y Deportivo Unidos Por El Deporte &copy; 2025 Todos los derechos reservados</p>
+       style="float: left; margin-right: 20px; width: 200px;"     <p class="footer-legal-CSYDPUP">Club Social Y Deportivo Unidos Por El Deporte &copy; 2025 Todos los derechos reservados</p>
             <ul class="footer-legal-list">
-                <li><a href="http://Aviso-legal.html">Aviso-legal</a></li>
-                <li><a href="http://Política-de-privacidad.html">Política de privacidad</a></li>
-                <li><a href="http://Política-de-cookies.html">Política de cookies</a></li>
+                <li><a href="{{ url_for('static', filename='filespdf/avisolegal.html') }}">Aviso-legal</a></li>
+                <li><a href="{{ url_for('static', filename='filespdf/polypriv.pdf') }}">Política de privacidad</a></li>
+                <li><a href="{{ url_for('static', filename='filespdf/polcook.pdf') }}">Política de cookies</a></li>
             </ul>
         </section>
     </section>

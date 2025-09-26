@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
+    <title>Pagina no encontrada</title>
+</head>
+<body>
+    <section class="">   
+        <ul class="navbar">
+            <li><img src="{{ url_for('static', filename='images/frontLogo.png')}}" alt="Logo"></li>
+            <li><a href="{{ url_for('home')}}#inicio">Inicio</a></li>
+            <li><a href="{{ url_for('home')}}#recorrido">Recorridos</a></li>
+            <li><a href="{{ url_for('home')}}#auspiciantes">Auspiciantes</a></li>
+            <li><a href="{{ url_for('home')}}#modalidades">Modalidades</a></li>
+            <li><a href="{{ url_for('home')}}#registrarse">Registrarse</a></li>
+        </ul>
+    </section>
+
+    <section>       
+        <div class="col-12-medium" style="margin: 20px;">
+            <h1 class="cuadroimg">Error 404: Página no encontrada</h1>
+            <img src="{{ url_for('static', filename='images/picturerror404.png') }}" style="position: absolute; right: 0; top:60px; width: 400px;" alt="">
+        </div>
+    <div class="cuadroimg" style="margin: 10px;;">
+        <h2>Maratón de la Ciudad de Buenos Aires</h2>
+        <h3>Domingo 5 de Octubre de 2024</h3>
+        <p>Lo sentimos, la página que estás buscando no existe.</p>
+
+        <ul>
+            <li>Verifica que la URL esté escrita correctamente.</li>
+            <li>Utiliza el menú de navegación para encontrar lo que buscas.</li>
+            <li>Si necesitas ayuda, contáctanos a través de nuestro formulario de contacto.</li>
+            <li><a href="{{ url_for('home') }}"> Volver a la página principal</a></li>
+        </ul>
+
+    </div>
+
+    </section>
+
+</body>
+</html>
