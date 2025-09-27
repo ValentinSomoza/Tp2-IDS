@@ -3210,18 +3210,22 @@ input, select, textarea {
 /* map contenido */
 #mapContainer iframe {
 	width: 100%;
-	height: 600px;
+	height: 700px;
 	border: none;
 }
+
 /* Para listas */
 .info-list {
-    list-style: none;   
+	list-style: none;   
     padding-left: 0;    
     margin-top: 0;    
 }
 
 	.info-list li {
 		margin-bottom: 5px; 
+	}
+	.info-list h3 {
+		background-color: #111111;
 	}
 
 	/* Grilla de iconos */
@@ -3398,7 +3402,6 @@ input, select, textarea {
 		box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 		text-align: center;
 	}
-
 		.form-container input {
 			width: 90%;
 			padding: 12px;
