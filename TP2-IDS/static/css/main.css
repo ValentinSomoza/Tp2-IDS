@@ -2355,10 +2355,32 @@ input, select, textarea {
 /* Image */
 
 	.cuadroimg{
-		overflow: hidden;
-		border-radius: 10px;
-  		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-		background-color: #a5abad;
+			color: rgba(255, 255, 255, 0.85);
+			border-radius: 10px;
+	  		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+
+			background-image: 
+				linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+				url("images/basicos/overlay1.png"),
+				url("../../images/basicos/header.jpg"),
+				linear-gradient(135deg, #696969aa 10%, #5643ff60 50%, #0077ffaa);
+
+			background-attachment: fixed, fixed, fixed, fixed;
+			background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+			background-position: center, center, center, center;
+			background-size: cover, cover, cover, cover;
+			background-blend-mode: overlay;
+
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+
+			transition: background 0.8s ease-in-out, color 0.5s ease;
+
+	}
+	.cuadroimg h3{
+		color: #FFFFFF;
 	}
 
 	.image {
