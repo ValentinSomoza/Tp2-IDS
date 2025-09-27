@@ -239,7 +239,6 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: calc(100% - 4em);
 		width: 60em;
-
 	}
 
 		.container.xsmall {
@@ -2361,13 +2360,14 @@ input, select, textarea {
   		box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 		background-color: #a5abad;
 	}
+
 	.image {
 		border-radius: 4px;
 		border: 0;
 		display: inline-block;
 		position: relative;
 	}
-
+	
 		.image img {
 			border-radius: 4px;
 			display: block;
@@ -2936,9 +2936,52 @@ input, select, textarea {
 			.main.style2 .icon.major {
 				color: #ffffff;
 			}
+/* barra de navegacion */
+#navbar {
+	background-color: #333333;
+	display: block;
+	top :0;
+	z-index: 2;
+	position: sticky;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+	#navbar li {
+		display: flex;
+		width: auto;
+		height: 100%;
+		float: left;
+		overflow: hidden;
+		padding: 0px;
+		margin: 0px;
+		text-align: center;
+	}
 
-/* Header */
+	#navbar a {
+		width: 100%;
+		height: 100%;
+		color: rgb(146, 142, 142);
+		padding: 14px 14px;
+		text-decoration: none;
+		border-bottom: none;
+	}
 
+		#navbar a:hover {
+		background-color: #111111;
+		color: whitesmoke;
+		}
+		
+	#navbar img {
+		display: flex;
+		max-width: 55px;
+		height: auto;
+		padding: 2px;
+		margin: 0px;
+	}
+
+/* inicio */
 	#inicio {
     padding: 9em 0 9em 0;
     background-color: #4686a0;
@@ -2948,7 +2991,7 @@ input, select, textarea {
         linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), 
         url("imagescss/MTBportada.png"), 
         url("imagescss/overlay3.svg"), 
-        linear-gradient(45deg, #ff00ea 5%, #00ff0d41 30%, #0687ff);
+        linear-gradient(45deg, #ff00ea56 2%, #00ff0d1e 30%, #0687ff69);
 
     background-attachment: fixed, fixed, fixed, fixed;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -3142,8 +3185,15 @@ input, select, textarea {
 		opacity: 1;
 	}
 
-/* Footer */
+/* map contenido */
+#mapContainer iframe {
+	width: 100%;
+	height: 600px;
+	border: none;
+}
 
+
+/* Footer */
 #footer {
     padding: 0 0 0 0;
     color: rgba(255, 255, 255, 0.85);
