@@ -18,11 +18,6 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
 mail = Mail(app)
 
 @app.route("/")
-def index():
-    title = "Club Social y Deportivo Unidos por el Deporte"
-    return render_template('index.html',page_title = title)
-
-@app.route("/")
 def home():
     return render_template ('index.html')
 
