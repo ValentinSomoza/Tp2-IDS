@@ -7,8 +7,8 @@
     <section id="inicio">
         <div class="inner">
             <li><img src="{{ url_for('static', filename='images/basicos/frontLogo.png') }}" alt="Icono 0" width="400"></li>
-            <h1><strong>Club Social y Deportivo Unidos por el Deporte</strong></h1>
-            <p><strong>Página oficial del evento de ciclismo MTB rural</strong></p>
+            <h1><strong>{{info_evento.organizador}}</strong></h1>
+            <p><strong>{{info_evento.descripcion}}</strong></p>
             <ul class="actions special">
                 <li><a href="{{ url_for('registro') }}" class="button"><strong>Inscribirse</strong></a></li>
             </ul>
@@ -148,46 +148,47 @@
                     <header class="major">
                         <h2>Auspiciantes</h2>
                     </header>
-                    <strong>Lockheed Martin</strong> 
+                    <strong>{{info_evento.auspiciantes[0]}}</strong> 
                     <span>Líder mundial en defensa, aviación y tecnología militar avanzada.</span><br><br>
 
-                    <strong>Rosamonte</strong> 
+                   
+                    <strong>{{info_evento.auspiciantes[1]}}</strong> 
                     <span>Tradicional empresa argentina dedicada a la producción de yerba mate.</span><br><br>
 
-                    <strong>Shimano</strong> 
+                    <strong>{{info_evento.auspiciantes[2]}}</strong> 
                     <span>Fabricante japonés líder en componentes de ciclismo, pesca y remo.</span><br><br>
 
-                    <strong>Gatorade</strong> 
+                    <strong>{{info_evento.auspiciantes[3]}}</strong> 
                     <span>Bebida deportiva global enfocada en hidratación y rendimiento físico.</span><br><br>
 
-                    <strong>Departamento de defensa de los Estados Unidos</strong> 
+                    <strong>{{info_evento.auspiciantes[4]}}</strong> 
                     <span>Institución gubernamental encargada de seguridad nacional y defensa militar.</span><br><br>
 
-                    <strong>Barraza</strong> 
+                    <strong>{{info_evento.auspiciantes[5]}}</strong> 
                     <span>Marca argentina reconocida por sus lácteos de calidad.</span><br><br>
 
-                    <strong>Los 5 Hispanos</strong> 
+                    <strong>{{info_evento.auspiciantes[6]}}</strong>  
                     <span>Proveedor mayorista de alimentos para comercios y distribuidores.</span><br><br>
 
-                    <strong>Epic Bikes</strong> 
+                    <strong>{{info_evento.auspiciantes[7]}}</strong>  
                     <span>Comercio especializado en la venta de bicicletas y accesorios para ciclistas.</span><br><br>
 
-                    <strong>Magenta</strong> 
+                    <strong>{{info_evento.auspiciantes[8]}}</strong> 
                     <span>?????</span><br><br>
 
-                    <strong>Mell Mell</strong> 
+                   <strong>{{info_evento.auspiciantes[9]}}</strong> 
                     <span>Empresa dedicada al turismo y alojamiento en diferentes destinos.</span><br><br>
 
-                    <strong>Nutremax</strong> 
+                    <strong>{{info_evento.auspiciantes[10]}}</strong> 
                     <span>Empresa enfocada en la investigación, desarrollo y producción de suplementos dietarios deportivos.</span><br><br>
 
-                    <strong>Rio Cordillerano</strong> 
+                   <strong>{{info_evento.auspiciantes[11]}}</strong> 
                     <span>Empresa de Tandil que vende agua envasada, soda en sifones y equipos de dispensado.</span><br><br>
 
-                    <strong>Samurai</strong> 
+                    <strong>{{info_evento.auspiciantes[12]}}</strong> 
                     <span>?????</span><br><br>
 
-                    <strong>SOX</strong> 
+                    <strong>{{info_evento.auspiciantes[13]}}</strong>  
                     <span>Marca de medias deportivas, de vestir y tecnológicas fabricada por MEDIARG en Pigüé.</span><br><br>
 
                 </div>
