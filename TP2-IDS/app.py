@@ -37,7 +37,7 @@ def registro():
 
         msg = Message(
             subject="Nueva inscripcion en la carrera",
-            recipients=["vsomoza@fi.uba.ar", correoUsuario],
+            recipients=[os.getenv('MAIL_USERNAME'), correoUsuario],
             body=f"Se registro el atleta llamado: {nombre} {apellido}\nDNI: {dni}\nCarrera: {carrera}"
         )
 
