@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Error 404{% endblock %}
+
+
+{% block content %}
+
+<section id="error404" class="main style2 special">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-12-medium"> <!-- parte izquierda -->
+                <h1>Error 404: Página no encontrada</h1>
+                <p>Lo sentimos, la página que estás buscando no existe.</p>
+                <ul>
+                    <li>Verifica que la URL esté escrita correctamente.</li>
+                    <li>Utiliza el menú de navegación para encontrar lo que buscas.</li>
+                    <li>Si necesitas ayuda, contáctanos a través de la Información que se encuentra mas abajo.</li>
+                </ul>
+                <a href="{{ url_for('home') }}" class="button primary">Volver al inicio</a>
+            </div>
+
+            <!-- parte derecha con imagen -->
+            <div class="col-6 col-12-medium">
+                <img src="{{ url_for('static', filename='images/basicos/picturerror404.png') }}" 
+                     alt="Error 404" 
+                     class="image fit">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

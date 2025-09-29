@@ -1,142 +1,336 @@
 {% extends "base.html" %}
 
-{% block title %}Inicio{% endblock %}flask runn
+{% block title %}CSUPD{% endblock %}
 
 {% block content %}
+    <!--Inicio-->
+    <section id="inicio">
+        <div class="inner">
+            <li><img src="{{ url_for('static', filename='images/basicos/frontLogo.png') }}" alt="Icono 0" width="400"></li>
+            <h1><strong>{{info_evento.organizador}}</strong></h1>
+            <p><strong>{{info_evento.descripcion}}</strong></p>
+            <ul class="actions special">
+                <li><a href="{{ url_for('registro') }}" class="button"><strong>Inscribirse</strong></a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <!--recorrido-->
+    <section id="recorrido" class="main style1">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-12 col-12-medium">
+                    <div class="major-title">Mapa del recorrido</div>
+                    <p>El recorrido arranca desde la FIUBA hasta el Congreso para quejarnos de la situación financiera de la institución</p>
+                    <div id="mapContainer">
+                        <iframe 
+                            src="https://www.google.com/maps/d/u/0/embed?mid=1T0AutS0XBtSbQTLyK-XseOV9Ir664f4&ehbc=2E312F&noprof=1"
+                            width="100%" 
+                            height="600" 
+                            style="border:0;" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
 
-<!-- navbar -->
-
-<!-- header -->
-<section id="header">
-    <div class="inner">
-        <li><img src="{{ url_for('static', filename='images/frontLogo.png') }}" alt="Icono 0" width="400"></li>
-        <h1><strong>Club Social y Deportivo Unidos por el Deporte</strong></h1>
-        <p><strong>Página oficial del evento de ciclismo MTB rural</strong></p>
-        <ul class="actions special">
-            <li><a href="{{ url_for('registro') }}" class="button"><strong>Inscribirse</strong></a></li>
-        </ul>
-    </div>
-</section>
-
-<section id="one" class="main style1">
-    <div class="container">
-        <div class="row gtr-150">
-            <!-- columna izquierda-->
-            <div class="col-6 col-12-medium">
-                <div class="major-title">Mapa del recorrido</div>
-                <p>El recorrido arranca desde la FIUBA hasta el Congreso para quejarnos de la situación financiera de la institución</p>
-                <div id="mapContainer">
-                    <iframe 
-                        src="https://www.google.com/maps/d/u/0/embed?mid=1T0AutS0XBtSbQTLyK-XseOV9Ir664f4&ehbc=2E312F&noprof=1"
-                        width="100%" 
-                        height="600" 
-                        style="border:0;" 
-                        allowfullscreen>
-                    </iframe>
+                    <div class="major">
+                        <h3>Detalles del recorrido</h3>
+                        <ul class="info-list">
+                            <li>📍 A - Punto de salida: Facultad de Ingeniería (FIUBA)</li>
+                            <li>📍 B - Punto de llegada: Congreso de la Nación Argentina</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="major">
+                        <h3>💧 Puntos de hidratación:</h3>
+                        <ul class="info-list">
+                            <li>1 - Carlos Calvo 491, C1102AAI Cdad. Autónoma de Buenos Aires</li>
+                            <li>2 - Chile 1805, C1227 Cdad. Autónoma de Buenos Aires</li>
+                            <li>3 - Rincón 292, C1081ABF Cdad. Autónoma de Buenos Aires</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- columna derecha -->
-            <div class="col-6 col-12-medium">
-                <div class="major"><h3>Detalles del recorrido</h3></div>
-                <ul class="info-list">
-                    <li>📍 A - Punto de salida: Facultad de Ingeniería (FIUBA)</li>
-                    <li>📍 B - Punto de llegada: Congreso de la Nación Argentina</li>
-                </ul>
-                <div class="major">
-                    <h4>💧 Puntos de hidratación:</h4>
-                    <ul class="info-list">
-                        <li>1 - Carlos Calvo 491, C1102AAI Cdad. Autónoma de Buenos Aires</li>
-                        <li>2 - Chile 1805, C1227 Cdad. Autónoma de Buenos Aires</li>
-                        <li>3 - Rincón 292, C1081ABF Cdad. Autónoma de Buenos Aires</li>
+    <!-- auspiciantes -->
+    <section id="auspiciantes" class="main style2"> 
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium"> <!-- columna izquierda -->
+                    <ul class="major-icons-grid">
+                        <li>
+                            <a href="https://www.lockheedmartin.com/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/lockheedMartin.png') }}" alt="Icono 1" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://rosamonte.com.ar/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/Rosamonte.png') }}" alt="Icono 2" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.shimano.com/en/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/Shimano.png') }}" alt="Icono 3" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.gatorade.com/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/Gatorade.png') }}" alt="Icono 4" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.war.gov/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/US.png') }}" alt="Icono 5" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://web.lacteosbarraza.com.ar/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/Barraza.png') }}" alt="Icono 6" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.5hispanos.com/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/5Hispanos.png') }}" alt="Icono 7" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://epicbikes.com.ar/?v=909ba4ad2bda" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/EpicBike25-2.png') }}" alt="Icono 8" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.google.com.ar" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/Magenta-2.png') }}" alt="Icono 9" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.mellmell.com.ar/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/MellMell.png') }}" alt="Icono 10" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.nutremax.com.ar/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/Nutremax25.png') }}" alt="Icono 11" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://riocordillerano.com.ar/" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/RioCordillerano25.png') }}" alt="Icono 12" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.google.com.ar" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/Samurai25.png') }}" alt="Icono 13" class="major-icon">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://soxmedias.com/?gad_source=1&gad_campaignid=20477246580&gclid=Cj0KCQjwrc7GBhCfARIsAHGcW5VxLXC9FvovmwKRns4Wyc35zNa6dJmoJVMwiQM3BGTsSNuUcxvD-vwaAp5xEALw_wcB" target="_blank">
+                                <img src="{{ url_for('static', filename='images/auspiciantes/SOX.png') }}" alt="Icono 14" class="major-icon">
+                            </a>
+                        </li>
                     </ul>
                 </div>
+                <div class="col-6 col-12-medium"> <!-- columna derecha-->
+                    <header class="major">
+                        <h2>Auspiciantes</h2>
+                    </header>
+                    <strong>{{info_evento.auspiciantes[0]}}</strong> 
+                    <span>Líder mundial en defensa, aviación y tecnología militar avanzada.</span><br><br>
+
+                   
+                    <strong>{{info_evento.auspiciantes[1]}}</strong> 
+                    <span>Tradicional empresa argentina dedicada a la producción de yerba mate.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[2]}}</strong> 
+                    <span>Fabricante japonés líder en componentes de ciclismo, pesca y remo.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[3]}}</strong> 
+                    <span>Bebida deportiva global enfocada en hidratación y rendimiento físico.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[4]}}</strong> 
+                    <span>Institución gubernamental encargada de seguridad nacional y defensa militar.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[5]}}</strong> 
+                    <span>Marca argentina reconocida por sus lácteos de calidad.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[6]}}</strong>  
+                    <span>Proveedor mayorista de alimentos para comercios y distribuidores.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[7]}}</strong>  
+                    <span>Comercio especializado en la venta de bicicletas y accesorios para ciclistas.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[8]}}</strong> 
+                    <span>?????</span><br><br>
+
+                   <strong>{{info_evento.auspiciantes[9]}}</strong> 
+                    <span>Empresa dedicada al turismo y alojamiento en diferentes destinos.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[10]}}</strong> 
+                    <span>Empresa enfocada en la investigación, desarrollo y producción de suplementos dietarios deportivos.</span><br><br>
+
+                   <strong>{{info_evento.auspiciantes[11]}}</strong> 
+                    <span>Empresa de Tandil que vende agua envasada, soda en sifones y equipos de dispensado.</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[12]}}</strong> 
+                    <span>?????</span><br><br>
+
+                    <strong>{{info_evento.auspiciantes[13]}}</strong>  
+                    <span>Marca de medias deportivas, de vestir y tecnológicas fabricada por MEDIARG en Pigüé.</span><br><br>
+
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    
+    <!-- modalidades -->
+    <section id="modalidades" class="main style1 special">
+        
+        <!-- primer conteiner -->
+        <div class="container"> 
+            <header class="major">
+                <h2>Modalidades de ciclismo</h2>
+                <h3>CROSS-COUNTRY</h3>
+            </header>
+            <p>
+                La disciplina más conocida del ciclismo de montaña que prioriza la velocidad que implica
+                pedaleo a través de montañas que dificultan las subidas empinadas y bajadas con obtaculos,
+                (Cross-country Marathon, Cross-Country Relay ,Cross-country Short Track y Cross-country Eliminator) son algunas variaciones comunes.
+            </p>
+            <div class="row gtr-150">
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/ccdif.jpg') }}" alt="img" /></span>
+                        <h3>Resistencia y velocidad</h3>
+                        <p>Los ciclistas deben tener un gran resistencia para cubrir largas distancias y ser rápidos en todas las secciones del recorrido</p>
+                    </div>
+                </div>
 
-<section id="two" class="main style2">
-    <div class="container">
-        <div class="row gtr-150">
-            <div class="col-6 col-12-medium">
-                <ul class="major-icons-grid">
-                    <li><img src="{{ url_for('static', filename='images/auspiciantes/lockheedMartin.png') }}" alt="Icono 1" class="major-icon"></li>
-                    <li><img src="{{ url_for('static', filename='images/auspiciantes/Rosamonte.png') }}" alt="Icono 2" class="major-icon"></li>
-                    <li><img src="{{ url_for('static', filename='images/auspiciantes/Shimano.png') }}" alt="Icono 3" class="major-icon"></li>
-                    <li><img src="{{ url_for('static', filename='images/auspiciantes/Gatorade.png') }}" alt="Icono 4" class="major-icon"></li>
-                    <li><img src="{{ url_for('static', filename='images/auspiciantes/US.png') }}" alt="Icono 5" class="major-icon"></li>
-                    <li><img src="{{ url_for('static', filename='images/auspiciantes/Barraza.png') }}" alt="Icono 6" class="major-icon"></li>
-                </ul>
-            </div>
-            <div class="col-6 col-12-medium">
-                <header class="major">
-                    <h2>Auspiciantes</h2>
-                </header>
-                <strong>Lockheed Martin</strong> 
-                <span>Líder mundial en defensa, aviación y tecnología militar avanzada.</span><br><br>
-                <strong>Rosamonte</strong> 
-                <span>Tradicional empresa argentina dedicada a la producción de yerba mate.</span><br><br>
-                <strong>Shimano</strong> 
-                <span>Fabricante japonés líder en componentes de ciclismo, pesca y remo.</span><br><br>
-                <strong>Gatorade</strong> 
-                <span>Bebida deportiva global enfocada en hidratación y rendimiento físico.</span><br><br>
-                <strong>Departamento de defensa de los Estados Unidos</strong> 
-                <span>Institución gubernamental encargada de seguridad nacional y defensa militar.</span><br><br>
-                <strong>Barraza</strong> 
-                <span>Marca argentina reconocida por sus lácteos de calidad.</span><br><br>
-            </div>
-        </div>
-    </div>
-</section>
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/ccbik.jpeg') }}" alt="bicicletas especial" /></span>
+                        <h3>Bicicletas especializadas</h3>
+                        <p>Una de las caracteristicas del Cross-country son las bicicletas ligeras diseñadas para que las subidas sean más rapidas y tambien ser eficientes para cubrir largas distacias, con suspenciones de bajo recorrido (80-110mm).</p>
+                    </div>    
+                </div>
 
-<section id="three" class="main style1 special">
-    <div class="container">
-        <header class="major">
-            <h2>Modalidades de ciclismo</h2>
-        </header>
-        <p>La bicicleta de montaña o mountain bike (MTB por sus siglas en inglés), engloba el mayor conjunto de modalidades dentro del ciclismo...</p>
-        <div class="row gtr-150">
-            <div class="col-4 col-12-medium">
-                <span class="image fit"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
-                <h3>Cross Country (XC)</h3>
-                <p>La disciplina más conocida implica pedaleo en senderos con dificultades técnicas...</p>
-            </div>
-            <div class="col-4 col-12-medium">
-                <span class="image fit"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" /></span>
-                <h3>All Mountain (AM)</h3>
-                <p>El All Mountain combina diversas modalidades, exigiendo habilidad técnica...</p>
-            </div>
-            <div class="col-4 col-12-medium">
-                <span class="image fit"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
-                <h3>Trail</h3>
-                <p>El Trail está entre el Cross Country y el All Mountain...</p>
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/ccolym.jpeg') }}" alt="" /></span>
+                        <h3>Modalidad Olímpica</h3>
+                        <p>Esta es la única modalida de ciclismo de montaña que se practica en los Juegos Olímpicos</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
 
-<section id="four" class="main style2 special">
-    <div class="container">
-        <header class="major">
-            <h2>Información relevante</h2>
-        </header>
-        <p>Descarga el reglamento y el deslinde</p>
-        <ul class="actions special">
-            <li><a href="#" class="button wide primary">Reglamento</a></li>
-            <li><a href="#" class="button wide primary">Deslinde</a></li>
-        </ul>
-    </div>
-</section>
+        <!-- segundo conteiner -->
+        <div class="container"> 
+            <header class="major">
+            </header>
+            <h3>ALL MONTAIN</h3>
+            <p>
+                Es una modalidad del ciclismo de montaña (MTB) que busca un equilibrio entre la capacidad de subida y la de descenso. A diferencia del enduro, 
+                que se centra más en los descensos, la bicicleta All Mountain está pensada para ser versátil y manejar diversos terrenos, desde subidas empinadas hasta bajadas técnicas con rocas y raíces. 
+                Es ideal para quienes disfrutan de recorrer toda la montaña sin especializarse en una sola área
+            </p>
+            <div class="row gtr-150">
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/amterr.jpg') }}" alt="" /></span>
+                        <h3>Terrenos variados</h3>
+                        <p>Rutas que incluyen descensos empinados y senderos técnicos pero tambien ascensos exigentes</p>
+                    </div>
+                </div>
 
-<!-- footer -->
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/ambik.jpg') }}" alt="" /></span>
+                        <h3>Bicicletas robustas</h3>
+                        <p>las bicicletas de esta disciplina pueden ser de doble suspenspion y con un recorrido más superior de 150 mm para absorcion equilibrada de los inoactos en los terrenos dificiles</p>
+                    </div>    
+                </div>
 
-<!-- scripts -->
-<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
-<script src="{{ url_for('static', filename='js/util.js') }}"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/ammod.jpg') }}" alt="" /></span>
+                        <h3>Equilibrio y habilidad tecnica</h3>
+                        <p>Es necesario tener destreza para superar obtáculos naturales como raices y rocas, los ciclistas buscan un buen rendimiento tanto en el pedaleo de subida como el de bajada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- tercer conteiner -->
+        <div class="container"> 
+            <header class="major">
+            </header>
+            <h3>TRAIL</h3>
+            <p>
+                El ciclismo de trail es una disciplina del ciclismo de montaña (MTB) que busca la versatilidad en el pedaleo, abordando tanto ascensos como descensos en diferentes terrenos, 
+                desde senderos suaves hasta áreas más técnicas. Se distingue de otras modalidades, como el cross country (más enfocado en la velocidad) o el enduro y downhill (más centrados en el descenso agresivo).
+            </p>
+            <div class="row gtr-150">
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/trailrecre.jpg') }}" alt="" /></span>
+                        <h3>Terreno tranquilo</h3>
+                        <p>Se practica en todo tipo de senderos, desde los más fluidos y con menos dificultad hasta aquellos con raíces, rocas, subidas pronunciadas y descensos técnicos.</p>
+                    </div>
+                </div>
+
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/trailterr.jpg') }}" alt="" /></span>
+                        <h3>Uso recreativo</h3>
+                        <p>El trail es una de las modalidades más practicadas de forma recreativa, ideal para pasar tiempo en la naturaleza y disfrutar del recorrido sin la presión de la velocidad o la competición.</p>
+                    </div>    
+                </div>
+
+                <div class="col-4 col-12-medium">
+                    <div class="cuadroimg">
+                        <span class="image fit"><img src="{{ url_for('static', filename='images/modalidades/trailbik.jpg') }}" alt="" /></span>
+                        <h3>Bicicletas modernas</h3>
+                        <p>La geometría está pensada para ser más relajada que la de una bicicleta de XC, lo que ofrece mayor control en descensos técnicos. El ángulo del tubo de dirección es más agresivo, lo que ayuda a absorber mejor los impactos y las piedras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- registro -->
+    <section id="registrarse" class="main style2 special">
+        <div class="container">
+            <header class="major">
+                <h2>Información relevante</h2>
+            </header>
+            <p>Descarga el reglamento y el deslinde</p>
+            <ul class="actions special">
+                <li><a href="{{ url_for('static', filename='filespdf/reglamento.pdf') }}" class="button wide primary">Reglamento</a></li>
+                <li><a href="{{ url_for('static', filename='filespdf/deslinde.pdf') }}" download class="button wide primary">Deslinde</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 {% endblock %}

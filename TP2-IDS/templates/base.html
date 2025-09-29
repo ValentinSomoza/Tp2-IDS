@@ -3,76 +3,138 @@
     <head>
         <title>{% block title %}Mi Página{% endblock %}</title>
 
-        {% block head_content %}
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
         <noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"></noscript>
-        <link rel="icon" href="{{ url_for('static', filename='images/icono.ico') }}" type="image/png">
-        {% endblock %}
+        <link rel="icon" href="{{ url_for('static', filename='images/basicos/icono.ico') }}" type="image/png">
     </head>
     
     <body class="is-preload">
 
         <!-- navbar -->
+        <div id="navbar">
+            <ul>
+                <li><img src="{{ url_for('static', filename='images/basicos/frontLogo.png')}}" alt="Logo"></li>
+                <li><a href="{{ url_for('home')}}#inicio">Inicio</a></li>
+                <li><a href="{{ url_for('home')}}#recorrido">Recorridos</a></li>
+                <li><a href="{{ url_for('home')}}#auspiciantes">Auspiciantes</a></li>
+                <li><a href="{{ url_for('home')}}#modalidades">Modalidades</a></li>
+                <li><a href="{{ url_for('home')}}#registrarse">Registrarse</a></li>
+            </ul>
+        </div>
 
-         {% block navbar %}
-
-        <ul class="navbar">
-            <li><a href="#header">Inicio</a></li>
-            <li><a href="#one">Recorridos</a></li>
-            <li><a href="#two">Auspiciantes</a></li>
-            <li><a href="#three">Modalidades</a></li>
-            <li><a href="#four">Registrarse</a></li>
-        </ul>
-
-
-         {% endblock %}
-
+        <!--el contenido de la paginan-->
         {% block content %}{% endblock %}
 
         <!-- footer -->
-
-      {% block footer %}
-      
         <section id="footer">
-        <ul class="footer-info">
-            <li>
-                <img src="{{ url_for('static', filename='images/github.png') }}" alt="GitHub" class="footer-icon" width="20">
-                <span class="footer-text">
-                    <a href="https://github.com/ValentinSomoza/Tp2-IDS" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </span>
-            </li>
-            <li>
-                <img src="{{ url_for('static', filename='images/wsp.png') }}" alt="WhatsApp" class="footer-icon" width="20">
-                <span class="footer-text">
-                    <a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer">+54 9 11 2345-6789</a>
-                </span>
-            </li>
-            <li>
-                <img src="{{ url_for('static', filename='images/mail.png') }}" alt="Email" class="footer-icon" width="20">
-                <span class="footer-text">
-                    <a href="mailto:ejemplo@email.com">ejemplo@email.com</a>
-                </span>
-            </li>
-        </ul>
-        <section id="footer-legal">
-            <p class="footer-legal-CSYDPUP">Club Social Y Deportivo Unidos Por El Deporte &copy; 2025 Todos los derechos reservados</p>
-            <ul class="footer-legal-list">
-                <li><a href="http://Aviso-legal.html">Aviso-legal</a></li>
-                <li><a href="http://Política-de-privacidad.html">Política de privacidad</a></li>
-                <li><a href="http://Política-de-cookies.html">Política de cookies</a></li>
-            </ul>
+            <div class="footer-auspiciantes">
+                <h2>Nos acompañan</h2>
+                <ul>
+                    <li>
+                        <a href="https://alpalo.com.ar/" target="_blank" rel="noopener noreferrer"> 
+                            <img src="{{ url_for('static', filename='images/auspiciantes/Alpalo.png') }}" alt="Alpalo" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://web.lacteosbarraza.com.ar/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/Barraza.png') }}" alt="Barraza" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://epicbikes.com.ar/?v=909ba4ad2bda" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/EpicBike.png') }}" alt="Epic bikes" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gatorade.lat/ar/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/Gatorade.png') }}" alt="Gatorade" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.lockheedmartin.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/lockheedMartin.png') }}" alt="lockheedmartin" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.magentacycling.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/Magenta-2.png') }}" alt="Megantcyling" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/mellmellsierra/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/MellMell.png') }}" alt="Mell Mel en la sierra tandil" class="footer-patrocinador">
+                            </a>
+                    </li>
+                    <li>
+                        <a href="https://www.nutremax.com.ar/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/Nutremax25.png') }}" alt="Nutremax" class="footer-patrocinador" >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://riocordillerano.com.ar/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/RioCordillerano25.png') }}" alt="Rio cordillerano" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://rosamonte.com.ar/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/Rosamonte.png') }}" alt="Rosamonte" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://samurai.com.ar/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static',  filename='images/auspiciantes/Samurai25.png') }}" alt="Samurai" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bike.shimano.com/es-ES/home.html" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/Shimano.png') }}" alt="Shinamo" class="footer-patrocinador">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://soxmedias.com" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ url_for('static', filename='images/auspiciantes/SOX.png') }}" alt="Soxmedias" class="footer-patrocinador">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
-    </section>
 
-      
-     {% endblock %}
-        
-
+        <!--footer legal-->
+        <section id="footer-legal">
+            <div class="footer-info">
+                <ul>
+                    <li>
+                        <img src="{{ url_for('static', filename='images/basicos/github.png') }}" alt="GitHub" class="footer-icon" width="20">
+                        <span class="footer-text">
+                            <a href="https://github.com/ValentinSomoza/Tp2-IDS" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="{{ url_for('static', filename='images/basicos/wsp.png') }}" alt="WhatsApp" class="footer-icon" width="20">
+                        <span class="footer-text">
+                            <a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer">+54 9 11 2345-6789</a>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="{{ url_for('static', filename='images/basicos/mail.png') }}" alt="Email" class="footer-icon" width="20">
+                        <span class="footer-text">
+                            <a href="mailto:ejemplo@email.com">ejemplo@email.com</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-more">
+                <p">Club Social Y Deportivo Unidos Por El Deporte &copy; 2025 Todos los derechos reservados</p>   
+                <ul>
+                    <li><a href="{{ url_for('static', filename='filespdf/avisolegal.html') }}">Aviso-legal</a></li>
+                    <li><a href="{{ url_for('static', filename='filespdf/polypriv.pdf') }}">Política de privacidad</a></li>
+                    <li><a href="{{ url_for('static', filename='filespdf/polcook.pdf') }}">Política de cookies</a></li>
+                </ul>
+            </div>
+        </section>
     </body>
 </html>
