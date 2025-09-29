@@ -63,7 +63,8 @@ def home():
         },
         "auspiciantes": ["Lockheed Martin", "Rosamonte", "Shimano", "Gatorade", 
         "Departamento de defensa de los Estados Unidos","Barraza","Los 5 Hispanos" ,"Epic Bikes","Magenta","Mell Mell",
-        "Nutremax","Rio Cordillerano","Samurai","SOX"]
+        "Nutremax","Rio Cordillerano","Samurai","SOX"],
+        "Modalidades de ciclismo": ["CROSS-COUNTRY", "ALL MONTAIN","TRAIL"],
     }
     return render_template('index.html', info_evento=info_evento)
 
