@@ -1,4 +1,4 @@
-# Tp2-IDS
+## TP2- Introducción al desarrollo de software (TB022)- Catedra Lanzillotta
 Este proyecto consiste en el desarrollo de una página web utilizando Flask como framework principal, junto con Python, HTML y CSS. De forma complementaria, se evalúa la incorporación de JavaScript para ampliar las funcionalidades del frontend.
 
 El objetivo principal es adquirir experiencia práctica en el uso de las herramientas fundamentales para el desarrollo web, especialmente en lo relacionado con el diseño y la construcción de interfaces de usuario.
@@ -13,8 +13,20 @@ Este trabajo se realiza en el marco de la cátedra del profesor Bruno Lanzillota
 
 ## Cómo ejecutar el proyecto en modo debug:
 
-```bash
-pipenv shell
-export FLASK_APP=app.py
-export FLASK_DEBUG=1
-flask run
+## crear entorno virtual
+- Ejecutamos: `pipenv install flask`
+  Esto instalara Flask y crea un entorno virtual con Pipenv, gestionando las dependencias en Pipfile.
+ `pipenv shell` activa nuestro entorno virtual para trabajar dentro de él.
+  Para desaactivarlo ejecuta `deactivate`
+
+## Instalar dependencias
+Con el entorno virtual activado, instalamos las dependencias del proyecto
+
+- Ejecuta `pip install -r requirements.txt`
+
+Esto instala todas las dependencias necesarias para ejecutar el proyecto
+
+## Seteo de variables para correr flask
+`export FLASK_APP=app.py`
+`export FLASK_DEBUG=1`
+`flask run` Esto te permite ver y probar tu aplicación en un navegador.
