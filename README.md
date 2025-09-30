@@ -1,9 +1,9 @@
 # Tp2-IDS
-Este proyecto consiste en el desarrollo de una página web utilizando Flask como framework principal, junto con Python, HTML y CSS. De forma complementaria, se evalúa la incorporación de JavaScript para ampliar las funcionalidades del frontend.
+Este proyecto consiste en el desarrollo de una página web, implementada utilizando Python y el framework Flask para la estructura general de la aplicación, junto con HTML, CSS y JavaScript como tecnologías principales para el frontend.
 
-El objetivo principal es adquirir experiencia práctica en el uso de las herramientas fundamentales para el desarrollo web, especialmente en lo relacionado con el diseño y la construcción de interfaces de usuario.
+El objetivo principal es adquirir experiencia práctica en el diseño y construcción de interfaces web, priorizando la presentación visual y la interacción con el usuario.
 
-Este trabajo se realiza en el marco de la cátedra del profesor Bruno Lanzillota, correspondiente a la materia Introducción al Desarrollo de Software.
+Este trabajo se enmarca en la cátedra del profesor Bruno Lanzillota, correspondiente a la materia Introducción al Desarrollo de Software.
 
 ## Integrantes del grupo
 
