@@ -2984,23 +2984,22 @@ input, select, textarea {
 	#navbar a {
 		width: 100%;
 		height: 100%;
-		color: rgb(146, 142, 142);
-		padding: 14px 14px;
+		color: rgb(255, 255, 255);
+		padding: 0.5em 1em;
 		text-decoration: none;
 		border-bottom: none;
 	}
 
 		#navbar a:hover {
-		background-color: #111111;
-		color: whitesmoke;
+		background-color: #000000;
+		color: rgb(255, 255, 255);
+		border-radius: 0.25em;
 		}
 		
 	#navbar img {
-		display: flex;
-		max-width: 55px;
+		width: 4.25em;
 		height: auto;
-		padding: 2px;
-		margin: 0px;
+		object-fit: cover;
 	}
 
 /* inicio */
@@ -3210,7 +3209,7 @@ input, select, textarea {
 /* map contenido */
 #mapContainer iframe {
 	width: 100%;
-	height: 700px;
+	height: 750px;
 	border: none;
 }
 
