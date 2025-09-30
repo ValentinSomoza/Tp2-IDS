@@ -1,3 +1,3 @@
 # Ignorar archivo de variables de entorno
 TP2-IDS/.env
-
+TP2-IDS/Pipfile.lock
