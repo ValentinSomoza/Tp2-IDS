@@ -25,8 +25,8 @@ def page_not_found(e):
 def registro():
     enviado = False
     if request.method == 'POST':
-        nombre = request.form.get("fname")
-        apellido = request.form.get("lname")
+        nombre = request.form.get("nombre")
+        apellido = request.form.get("apellido")
         dni = request.form.get("dni")
         carrera = request.form.get("carrera")
         correoUsuario = request.form.get("email")

@@ -7,13 +7,13 @@
     <h2>Formulario</h2>
     
     <div class="form-container">
-        <form id="registroForm" action="{{ url_for('registro')}}" method="post">
+        <form id="registroFormulario" action="{{ url_for('registro')}}" method="post">
 
-            <label for="firstname">Nombre:</label>
-            <input type="text" id="firstname" name="fname" placeholder="Nombre" required>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
 
-            <label for="lastname">Apellido:</label>
-            <input type="text" id="lastname" name="lname" placeholder="Apellido" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
 
             <label for="DNI/Pasaporte">D.N.I o Pasaporte:</label>
             <input 
@@ -48,9 +48,7 @@
 <div id="mensaje">Formulario enviado!</div>
 
 <script src="{{ url_for('static', filename='js/registro.js') }}"></script>
-<script>
-    const enviado = "{{ enviado }}".toLowerCase() === "true";
-</script>
+<script> const enviado = "{{ enviado }}".toLowerCase() === "true" </script>
 {% endblock %}
 
 
