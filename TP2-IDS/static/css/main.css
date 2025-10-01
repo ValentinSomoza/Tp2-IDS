@@ -3457,6 +3457,16 @@ input, select, textarea {
 			-moz-appearance: none;
 		}
 
+		.form-container input,
+		.form-container select {
+			background-color: #ffffff; 
+			color: #000000;            
+		}
+
+		.form-container input::placeholder {
+			color: #666; 
+		}
+
 #mensaje {
     display: none;
     position: fixed;

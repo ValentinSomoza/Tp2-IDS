@@ -1,3 +1,20 @@
-# Ignorar archivo de variables de entorno
+# Archivos de entorno
 TP2-IDS/.env
-TP2-IDS/Pipfile.lock
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entorno virtual
+.venv/
+env/
+venv/
+
+# Editor y Sistemas
+.vscode/
+.DS_Store
+Thumbs.db
