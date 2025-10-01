@@ -1,7 +1,5 @@
 ## TP2- Introducción al desarrollo de software (TB022)- Catedra Lanzillotta
 Este proyecto consiste en el desarrollo de una página web utilizando Flask como framework principal, junto con Python, HTML y CSS. De forma complementaria, se evalúa la incorporación de JavaScript para ampliar las funcionalidades del frontend.
-# Tp2-IDS
-Este proyecto consiste en el desarrollo de una página web, implementada utilizando Python y el framework Flask para la estructura general de la aplicación, junto con HTML, CSS y JavaScript como tecnologías principales para el frontend.
 
 El objetivo principal es adquirir experiencia práctica en el diseño y construcción de interfaces web, priorizando la presentación visual y la interacción con el usuario.
 
