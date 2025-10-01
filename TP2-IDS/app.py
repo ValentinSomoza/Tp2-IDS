@@ -17,10 +17,6 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
 
 mail = Mail(app)
 
-@app.route("/")
-def home():
-    return render_template ('index.html')
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template ('404.html'), 404
@@ -51,19 +47,26 @@ def registro():
     return render_template('registro.html', page_title="Registro Evento", enviado=enviado)
 
 
+@app.route("/")
+def home():
+    info_evento = {
+        "nombre": "Rally MTB 2025",
+        "organizador": "Club Social y Deportivo Unidos por el Deporte",
+        "descripcion": "Carrera de MTB rural en dos modalidades 30km y 80km ...",
+        "fecha": "24 de Octubre de 2025",
+        "horario": "8am",
+        "lugar": "Tandil, Buenos Aires",
+        "tipo_carrera": "MTB rural",
+        "modalidad_costo": {
+            1: {"nombre": "Corta", "valor": "100"},
+            2: {"nombre": "Larga", "valor": "200"}
+        },
+        "auspiciantes": ["Lockheed Martin", "Rosamonte", "Shimano", "Gatorade", 
+        "Departamento de defensa de los Estados Unidos","Barraza","Los 5 Hispanos" ,"Epic Bikes","Magenta","Mell Mell",
+        "Nutremax","Rio Cordillerano","Samurai","SOX"],
+        "Modalidades de ciclismo": ["CROSS-COUNTRY", "ALL MONTAIN","TRAIL"],
+    }
+    return render_template('index.html', info_evento=info_evento)
+
 if __name__ == "__main__":
     app.run("127.0.0.1", port="5000", debug=True)
-
-info_evento = {
-1:  { "nombre": "Rally MTB 2025",
-    "organizador": "Club Social y Deportivo Unidos por el Deporte",
-    "descripcion": "Carrera de MTB rural en dos modalidades 30km y 80km ...",
-    "fecha": "24 de Octubre de 2025",
-    "horario": "8am",
-    "lugar": "Tandil, Buenos Aires",
-    "tipo_carrera": "MTB rural",
-    "modalidad_costo": {1: {"nombre": "Corta" ,"valor": "100"},
-                        2: {"nombre": "Larga" ,"valor": "200"}},
-    "Auspiciantes": ["ausp1","auspN"]
-    }
-}
