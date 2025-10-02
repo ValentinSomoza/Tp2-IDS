@@ -64,8 +64,8 @@ def home():
             2: {"nombre": "Larga", "valor": "200"}
         },
         "horario": {
-            1: {"inicio": "08:00 hs.", "premios": "15 hs."},
-            2: {"inicio": "08:30 hs.", "premios": "15 hs."}
+            1: {"inicio": "08:00 hs.", "premios": "15:00 hs."},
+            2: {"inicio": "08:30 hs.", "premios": "15:30 hs."}
         },
         "auspiciantes": ["Lockheed Martin", "Rosamonte", "Shimano", "Gatorade", 
         "Departamento de defensa de los Estados Unidos","Barraza","Los 5 Hispanos" ,"Epic Bikes","Magenta","Mell Mell",
