@@ -57,9 +57,15 @@ def home():
         "horario": "8am",
         "lugar": "Tandil, Buenos Aires",
         "tipo_carrera": "MTB rural",
+        "inscripciones": ["1 de agosto", "20 de Octubre"],
+        "descuento" : "Descuento en centro de inscripciones",
         "modalidad_costo": {
             1: {"nombre": "Corta", "valor": "100"},
             2: {"nombre": "Larga", "valor": "200"}
+        },
+        "horario": {
+            1: {"inicio": "08:00 hs.", "premios": "15 hs."},
+            2: {"inicio": "08:30 hs.", "premios": "15 hs."}
         },
         "auspiciantes": ["Lockheed Martin", "Rosamonte", "Shimano", "Gatorade", 
         "Departamento de defensa de los Estados Unidos","Barraza","Los 5 Hispanos" ,"Epic Bikes","Magenta","Mell Mell",
