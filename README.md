@@ -19,30 +19,12 @@ Para poder arrancar este proyecto se necesitan las siguientes bibliotecas de Pyt
 - **Flask-Mail** → para el envio de correos electronicos
 - **python-dotenv** → manejo de variables de entorno
 
-
 ```bash
 pip install flask Flask-Mail python-dotenv
 ```
 
 ## Cómo ejecutar el proyecto en modo debug:
 
-## crear entorno virtual
-- Ejecutamos: `pipenv install flask`
-  Esto instalara Flask y crea un entorno virtual con Pipenv, gestionando las dependencias en Pipfile.
- `pipenv shell` activa nuestro entorno virtual para trabajar dentro de él.
-  Para desaactivarlo ejecuta `deactivate`
-
-## Instalar dependencias
-Con el entorno virtual activado, instalamos las dependencias del proyecto
-
-- Ejecuta `pip install -r requirements.txt`
-
-Esto instala todas las dependencias necesarias para ejecutar el proyecto
-
-## Seteo de variables para correr flask
-`export FLASK_APP=app.py`
-`export FLASK_DEBUG=1`
-`flask run` Esto te permite ver y probar tu aplicación en un navegador.
 ```bash
 pipenv shell
 export FLASK_APP=app.py
